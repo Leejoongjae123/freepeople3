@@ -11,6 +11,7 @@ export default function AddTopic() {
   const [selectedInputs, setSelectedInputs] = useState();
   const [inputTitle, setInputTitle] = useState("");
   const [inputContents, setInputContents] = useState("");
+  const [src, setSrc] = useState("")
 
   const router = useRouter();
 
@@ -56,49 +57,43 @@ export default function AddTopic() {
       );
       setInputContents(result);
     }
-    let postInfo={}
+    let postInfo = {};
 
-    if(selectedInputs==='option1'){
-      postInfo={
+    if (selectedInputs === "option1") {
+      postInfo = {
         id: 0,
         title: inputTitle,
         contents: inputContents,
-        imageUrl:
-          "http://www.datamarket.kr/wp-content/uploads/2014/05/129.jpg",
+        imageUrl: src,
         regiDate: getFormattedDate(),
-        urlDetail:"",
-        category:'jgissue',
-      }
-    } else if(selectedInputs==='option2'){
-      postInfo={
-        id: 0,
-        title: inputTitle,
-        contents: inputContents,
-        regiDate: getFormattedDate(),
-        category:'future',
-      }
-    }else{
-      postInfo={
+        urlDetail: "",
+        category: "jgissue",
+      };
+    } else if (selectedInputs === "option2") {
+      postInfo = {
         id: 0,
         title: inputTitle,
         contents: inputContents,
         regiDate: getFormattedDate(),
-        category:'column',
-      }
+        category: "future",
+      };
+    } else {
+      postInfo = {
+        id: 0,
+        title: inputTitle,
+        contents: inputContents,
+        regiDate: getFormattedDate(),
+        category: "column",
+      };
     }
 
     try {
-      const response = await axios.post(
-        url, [
-          postInfo
-        ],
-        {
-          headers: {
-            accept: "application/json",
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await axios.post(url, [postInfo], {
+        headers: {
+          accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      });
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -165,18 +160,36 @@ export default function AddTopic() {
                     </label>
                     <div className="flex gap-x-3">
                       <input
-                        type="text"
-                        name="first-name"
-                        id="first-name"
-                        autoComplete="given-name"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        type="file"
+                        accept="image/*"
+                        onChange={async (e) => {
+                          let file = e.target.files[0];
+                          let filename = encodeURIComponent(file.name);
+                          let res = await fetch(
+                            "/api/post/image?file=" + filename
+                          );
+                          res = await res.json();
+
+                          //S3 업로드
+                          const formData = new FormData();
+                          Object.entries({ ...res.fields, file }).forEach(
+                            ([key, value]) => {
+                              formData.append(key, value);
+                            }
+                          );
+                          let 업로드결과 = await fetch(res.url, {
+                            method: "POST",
+                            body: formData,
+                          });
+                          console.log(업로드결과);
+
+                          if (업로드결과.ok) {
+                            setSrc(업로드결과.url + "/" + filename);
+                          } else {
+                            console.log("실패");
+                          }
+                        }}
                       />
-                      <button
-                        type="button"
-                        className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-                      >
-                        Find
-                      </button>
                     </div>
                   </div>
                 </div>
@@ -284,12 +297,11 @@ export default function AddTopic() {
   );
 }
 
-
 function getFormattedDate() {
   const today = new Date();
   const year = today.getFullYear();
-  const month = String(today.getMonth() + 1).padStart(2, '0');
-  const day = String(today.getDate()).padStart(2, '0');
+  const month = String(today.getMonth() + 1).padStart(2, "0");
+  const day = String(today.getDate()).padStart(2, "0");
 
   const formattedDate = `${year}-${month}-${day}`;
   return formattedDate;
