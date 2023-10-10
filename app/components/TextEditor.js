@@ -13,19 +13,13 @@ export default function TextEditor({initialContent,inputContents,setInputContent
     if(initialContent){
       setContent(initialContent)
     }
-  } )
+
+  },[])
 
   const placeholder='Hello'
   
   
-  const handleClick= ()=>{
-    if(content.includes('td style=')){
-      let result=content.replaceAll('td style="', `td style="border:1px solid black;`);
-      setResult(result)
-    }else{
-      setResult(content)
-    }
-  }
+
 
 
   
@@ -41,12 +35,6 @@ export default function TextEditor({initialContent,inputContents,setInputContent
         }}
       />
     <div>
-      <div>
-        {content}
-      </div>
-    <button onClick={handleClick}>
-      변환
-    </button>
     </div>
     </div>
   );

@@ -29,10 +29,12 @@ export default function ArticleModal({modalText, closeModal}) {
                 )}
 
 
-                <div className="flex p-6 space-y-6 ">
-                  <p className="whitespace-pre-wrap text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                    {modalText[1]}
-                  </p>
+                <div className="flex-1 p-6 space-y-6 ">
+                  {/* <p className="whitespace-pre-wrap text-base leading-relaxed text-gray-500 dark:text-gray-400"> */}
+                    <div dangerouslySetInnerHTML={{__html:modalText[1]}}>
+                    </div>
+                    
+                  {/* </p> */}
                     
                 </div>
 

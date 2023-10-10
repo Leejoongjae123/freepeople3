@@ -48,18 +48,49 @@ export default function AddTopic() {
       url =
         "https://mks5ux6whggik4anhr3c5ofdie0abvss.lambda-url.ap-northeast-2.on.aws/addColumnPosting";
     }
+
+    if (inputContents.includes("td style=")) {
+      let result = content.replaceAll(
+        'td style="',
+        `td style="border:1px solid black;`
+      );
+      setInputContents(result);
+    }
+    let postInfo={}
+
+    if(selectedInputs==='option1'){
+      postInfo={
+        id: 0,
+        title: inputTitle,
+        contents: inputContents,
+        imageUrl:
+          "http://www.datamarket.kr/wp-content/uploads/2014/05/129.jpg",
+        regiDate: getFormattedDate(),
+        urlDetail:"",
+        category:'jgissue',
+      }
+    } else if(selectedInputs==='option2'){
+      postInfo={
+        id: 0,
+        title: inputTitle,
+        contents: inputContents,
+        regiDate: getFormattedDate(),
+        category:'future',
+      }
+    }else{
+      postInfo={
+        id: 0,
+        title: inputTitle,
+        contents: inputContents,
+        regiDate: getFormattedDate(),
+        category:'column',
+      }
+    }
+
     try {
       const response = await axios.post(
-        url,
-        [
-          {
-            id: 0,
-            title: inputTitle,
-            contents: inputContents,
-            imageUrl:
-              "http://www.datamarket.kr/wp-content/uploads/2014/05/129.jpg",
-            regiDate: "2023-09-24",
-          },
+        url, [
+          postInfo
         ],
         {
           headers: {
@@ -75,9 +106,18 @@ export default function AddTopic() {
 
   const handleButtonClick = () => {
     console.log("버튼이 클릭되었습니다.");
+    if (inputContents.includes("td style=")) {
+      let result = content.replaceAll(
+        'td style="',
+        `td style="border:1px solid black;`
+      );
+      setInputContents(result);
+    }
     fetchData();
     router.push("/admin/list");
   };
+
+  console.log("contents:", inputContents);
 
   return (
     <>
@@ -160,10 +200,7 @@ export default function AddTopic() {
                     <TextEditor
                       inputContents={inputContents}
                       setInputContents={setInputContents}
-                      
-                    >
-
-                    </TextEditor>
+                    ></TextEditor>
                   </div>
                 </div>
               </div>
@@ -245,4 +282,15 @@ export default function AddTopic() {
       </div>
     </>
   );
+}
+
+
+function getFormattedDate() {
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = String(today.getMonth() + 1).padStart(2, '0');
+  const day = String(today.getDate()).padStart(2, '0');
+
+  const formattedDate = `${year}-${month}-${day}`;
+  return formattedDate;
 }

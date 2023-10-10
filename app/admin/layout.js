@@ -23,7 +23,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Sidebar></Sidebar>
+        <main className='grow'>
         {children}
+        </main>
       </body>
     </html>
   )

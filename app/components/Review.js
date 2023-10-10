@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { Fragment } from "react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -33,7 +33,7 @@ export default function Review() {
   const [modalTitle, setModalTitle] = useState("");
   const [modalText, setModalText] = useState(["", "", ""]);
 
-  console.log('bigKindsData:',bigKindsData)
+  console.log("bigKindsData:", bigKindsData);
   useEffect(() => {
     // 데이터를 가져오는 함수를 정의합니다.
     const fetchData = async () => {
@@ -197,14 +197,16 @@ export default function Review() {
                     </h1>
                     <div className="p-5 grid grid-cols-3 items-center gap-x-5">
                       <div className="relative col-span-1 h-48 flex justify-center">
-                        {bigKindsData.imageUrl.includes('http')?(
-                        <Image
-                          className="object-contain"
-                          src={bigKindsData.imageUrl}
-                          alt="thumbnail"
-                          fill
-                        />):(<div></div>)}
-                        
+                        {bigKindsData.imageUrl.includes("http") ? (
+                          <Image
+                            className="object-contain"
+                            src={bigKindsData.imageUrl}
+                            alt="thumbnail"
+                            fill
+                          />
+                        ) : (
+                          <div></div>
+                        )}
                       </div>
                       <div className="col-span-2">
                         <button
@@ -220,9 +222,13 @@ export default function Review() {
                             {bigKindsData.title}
                           </h5>
                         </button>
-                        <p className="whitespace-normal line-clamp-6 mb-3 text-base font-normal text-gray-700 dark:text-gray-400">
-                          {bigKindsData.contents}
-                        </p>
+                        <div className="whitespace-normal line-clamp-6 mb-3 text-base font-normal text-gray-700 dark:text-gray-400">
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html: bigKindsData.contents,
+                            }}
+                          />
+                        </div>
                         <p className="mb-3 text-xs font-normal text-gray-700 dark:text-gray-400">
                           {bigKindsData.regiDate}
                         </p>
@@ -355,11 +361,11 @@ export default function Review() {
                     미래민중 논평
                   </h1>
                   <div className="flex flex-col justify-center">
-                    <ul className="grid w-full justify-start px-10 gap-4 items-center">
-                      {futureData.map((elem, index) => (
+                    <ul className="flex flex-col w-full justify-start px-10 gap-4 items-center">
+                    {futureData.map((elem, index) => (
                         <li
                           key={index * 111}
-                          className="w-full pb-3 mx-auto sm:pb-4 border-b-2 "
+                          className="w-full pb-3 mx-auto sm:pb-4 border-b-2"
                         >
                           <div className="grid grid-cols-4 items-center space-x-4">
                             <div className="col-span-3">
@@ -372,20 +378,24 @@ export default function Review() {
                                   );
                                 }}
                               >
-                                <p className="text-left text-lg font-bold text-gray-900 dark:text-white">
+                                <div className="line-clamp-2 text-left text-lg font-bold text-gray-900  dark:text-white">
                                   {elem.title}
-                                </p>
+                                </div>
                               </button>
                               {/* <p className="text-sm text-gray-500 dark:text-gray-400">
-                              {elem.contents}
-                            </p> */}
-                              <div className="col-span-1">
-                                <p className="line-clamp-2 text-base text-gray-500 dark:text-gray-400">
-                                  {elem.contents}
-                                </p>
+                            {elem.contents}
+                          </p> */}
+                              <div>
+                                <div className="line-clamp-2 text-base text-gray-500 dark:text-gray-400">
+                                  <div
+                                    dangerouslySetInnerHTML={{
+                                      __html: elem.contents,
+                                    }}
+                                  />
+                                </div>
                               </div>
                             </div>
-                            <div className="col-span-1 text-sm text-center text-gray-900 dark:text-white">
+                            <div className="col-span-1 text- text-center text-gray-900 dark:text-white">
                               {elem.regiDate}
                             </div>
                           </div>
@@ -503,11 +513,11 @@ export default function Review() {
                     칼럼 연구
                   </h1>
                   <div className="flex flex-col justify-center h-full">
-                    <ul className="grid h-full justify-start px-10 gap-4 items-center">
+                    <ul className="h-full justify-start px-10 gap-4 items-center">
                       {columnData.map((elem, index) => (
                         <li
                           key={index * 111}
-                          className="w-full pb-3 mx-auto sm:pb-4 border-b-2"
+                          className="w-full flex-1 pb-3 mx-auto sm:pb-4 border-b-2"
                         >
                           <div className="grid grid-cols-4 items-center space-x-4">
                             <div className="col-span-3">
@@ -520,17 +530,21 @@ export default function Review() {
                                   );
                                 }}
                               >
-                                <p className="line-clamp-2 text-left text-lg font-bold text-gray-900  dark:text-white">
+                                <div className="line-clamp-2 text-left text-lg font-bold text-gray-900  dark:text-white">
                                   {elem.title}
-                                </p>
+                                </div>
                               </button>
                               {/* <p className="text-sm text-gray-500 dark:text-gray-400">
                             {elem.contents}
                           </p> */}
                               <div>
-                                <p className="line-clamp-2 text-base text-gray-500 dark:text-gray-400">
-                                  {elem.contents}
-                                </p>
+                                <div className="line-clamp-2 text-base text-gray-500 dark:text-gray-400">
+                                  <div
+                                    dangerouslySetInnerHTML={{
+                                      __html: elem.contents,
+                                    }}
+                                  />
+                                </div>
                               </div>
                             </div>
                             <div className="col-span-1 text- text-center text-gray-900 dark:text-white">
