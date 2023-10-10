@@ -1,50 +1,14 @@
-"use client";
-import React, { useRef } from "react";
-import dynamic from 'next/dynamic';
-import { useState,useMemo } from "react";
-const JoditEditor = dynamic(() => import('jodit-react'), { ssr: false });
+import React from "react";
+import TextEditor from '../components/TextEditor'
 
 export default function page() {
-  const editor = useRef(null);
-
-  const placeholder='Hello'
-
-  const [content, setContent] = useState("");
-  const [result, setResult] = useState("")
-  const handleClick= ()=>{
-    if(content.includes('td style=')){
-      let result=content.replaceAll('td style="', `td style="border:1px solid black;`);
-      setResult(result)
-    
-    }else{
-      setResult(content)
-    }
-  }
-
-
-  
   
   return (
     <div>
-      <h1>안녕하세요</h1>
-      <JoditEditor
-        ref={editor}
-        value='<p>fadsfasdf</p><p><br></p><p>adsfadsf</p><p><br></p><table style="border-collapse:collapse;width: 100%;"><tbody>
-        <tr>
-          <td style="border:1px solid black;width: 50%; border-color: rgb(255, 0, 255);">123123</td>
-          <td style="border:1px solid black;width: 50%; border-color: rgb(255, 0, 255);">123123</td></tr></tbody></table>'
-        onChange={(newContent) => {
-          setContent(newContent)
-        }}
-      />
-    <div>
+      <h1>텍스트에디터입니다.</h1>
       <div>
-        {content}
+        <TextEditor></TextEditor>
       </div>
-    <button onClick={handleClick}>
-      변환
-    </button>
-    </div>
     </div>
   );
 }
