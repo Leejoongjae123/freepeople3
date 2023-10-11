@@ -7,9 +7,8 @@ export default function ArticleModal({modalText, closeModal}) {
   return (
     <>
     <div id="staticModal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true" className="inset-0 fixed flex items-center justify-center z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full backdrop-blur-md">
-        <div className="relative w-full max-w-2xl max-h-full">
+        <div className="relative max-w-screen-md max-h-full">
             <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
-
                 <div className="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
                     <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                         {modalText[0]}

@@ -193,13 +193,13 @@ export default function Review() {
                 </div>
               ) : (
                 <>
+                  <h1 className="text-2xl font-bold text-center my-5">
+                    정치경제현안분석
+                  </h1>
                   <div className="min-h-fit bg-white border border-gray-200 rounded-lg shadow">
-                    <h1 className="text-2xl font-bold text-center my-5">
-                      정치경제현안분석
-                    </h1>
                     <div className="p-5 grid grid-cols-3 items-center gap-x-5">
                       <div className="relative col-span-1 h-48 flex justify-center">
-                        {bigKindsData.imageUrl.includes("http") ? (
+                        {bigKindsData ? (
                           <Image
                             className="object-contain"
                             src={bigKindsData.imageUrl}
@@ -210,31 +210,35 @@ export default function Review() {
                           <div></div>
                         )}
                       </div>
-                      <div className="col-span-2">
-                        <button
-                          onClick={() => {
-                            handleButtonClick(
-                              bigKindsData.title,
-                              bigKindsData.contents,
-                              bigKindsData.imageUrl
-                            );
-                          }}
-                        >
-                          <h5 className="text-center mb-2 text-xs lg:text-lg font-bold tracking-tight text-gray-900 dark:text-white">
-                            {bigKindsData.title}
-                          </h5>
-                        </button>
-                        <div className="whitespace-normal line-clamp-6 mb-3 text-xs lg:text-base font-normal text-gray-700 dark:text-gray-400">
-                          <div
-                            dangerouslySetInnerHTML={{
-                              __html: bigKindsData.contents,
+                      {bigKindsData ? (
+                        <div className="col-span-2 ">
+                          <button
+                            onClick={() => {
+                              handleButtonClick(
+                                bigKindsData.title,
+                                bigKindsData.contents,
+                                bigKindsData.imageUrl
+                              );
                             }}
-                          />
+                          >
+                            <h5 className="text-left mb-2 text-xs lg:text-lg font-bold tracking-tight text-gray-900 dark:text-white">
+                              {bigKindsData.title}
+                            </h5>
+                          </button>
+                          <div className="whitespace-normal line-clamp-6 mb-3 text-xs lg:text-base font-normal text-gray-700 dark:text-gray-400">
+                            <div
+                              dangerouslySetInnerHTML={{
+                                __html: bigKindsData.contents,
+                              }}
+                            />
+                          </div>
+                          <p className="mb-3 text-xs lg:text-base font-normal text-gray-700 dark:text-gray-400">
+                            {bigKindsData.regiDate}
+                          </p>
                         </div>
-                        <p className="mb-3 text-xs font-normal text-gray-700 dark:text-gray-400">
-                          {bigKindsData.regiDate}
-                        </p>
-                      </div>
+                      ) : (
+                        <div></div>
+                      )}
                     </div>
                     <div
                       className="hidden duration-700 ease-in-out"
@@ -358,149 +362,151 @@ export default function Review() {
                   <Spinner></Spinner>
                 </div>
               ) : (
-                <div className="flex flex-col bg-white border border-gray-200 rounded-lg shadow">
+                <>
                   <h1 className="text-2xl font-bold text-center my-5">
                     미래민중 논평
                   </h1>
-                  <div className="flex flex-col justify-center">
-                    <ul className="flex flex-col w-full justify-start px-10 gap-4 items-center">
-                    {futureData.map((elem, index) => (
-                        <li
-                          key={index * 111}
-                          className="w-full pb-3 mx-auto sm:pb-4 border-b-2"
-                        >
-                          <div className="grid grid-cols-4 items-center space-x-4">
-                            <div className="col-span-3">
-                              <button
-                                onClick={() => {
-                                  handleButtonClick(
-                                    elem.title,
-                                    elem.contents,
-                                    ""
-                                  );
-                                }}
-                              >
-                                <div className="line-clamp-2 text-left text-xs lg:text-lg font-bold text-gray-900  dark:text-white">
-                                  {elem.title}
-                                </div>
-                              </button>
-                              {/* <p className="text-sm text-gray-500 dark:text-gray-400">
+                  <div className="flex flex-col bg-white border border-gray-200 rounded-lg shadow">
+                    <div className="flex flex-col justify-center p-5">
+                      <ul className="flex flex-col w-full justify-start gap-4 items-center">
+                        {futureData.map((elem, index) => (
+                          <li
+                            key={index * 111}
+                            className="w-full pb-3 mx-auto sm:pb-4 border-b-2"
+                          >
+                            <div className="grid grid-cols-4 items-center space-x-4">
+                              <div className="col-span-3">
+                                <button
+                                  onClick={() => {
+                                    handleButtonClick(
+                                      elem.title,
+                                      elem.contents,
+                                      ""
+                                    );
+                                  }}
+                                >
+                                  <div className="line-clamp-2 text-left text-xs lg:text-lg font-bold text-gray-900  dark:text-white">
+                                    {elem.title}
+                                  </div>
+                                </button>
+                                {/* <p className="text-sm text-gray-500 dark:text-gray-400">
                             {elem.contents}
                           </p> */}
-                              <div>
-                                <div className="line-clamp-2 text-xs lg:text-base text-gray-500 dark:text-gray-400">
-                                  <div
-                                    dangerouslySetInnerHTML={{
-                                      __html: elem.contents,
-                                    }}
-                                  />
+                                <div>
+                                  <div className="line-clamp-2 text-xs lg:text-base text-gray-500 dark:text-gray-400">
+                                    <div
+                                      dangerouslySetInnerHTML={{
+                                        __html: elem.contents,
+                                      }}
+                                    />
+                                  </div>
                                 </div>
                               </div>
+                              <div className="col-span-1 text-xs lg:text-base text-center text-gray-900 dark:text-white">
+                                {elem.regiDate}
+                              </div>
                             </div>
-                            <div className="col-span-1 text-xs lg:text-base text-center text-gray-900 dark:text-white">
-                              {elem.regiDate}
-                            </div>
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="flex justify-center my-3">
-                      <ul className="inline-flex -space-x-px text-sm">
-                        <li>
-                          <button
-                            onClick={() => handlePreviousClick2()}
-                            className={`flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 rounded-l-lg`}
-                          >
-                            <FcPrevious size={10}></FcPrevious>{" "}
-                          </button>
-                        </li>
-                        <li>
-                          <button
-                            value={1}
-                            onClick={(e) =>
-                              handleLinkClick2(e, futureNoList[0])
-                            }
-                            className={`${
-                              futureNo == futureNoList[0]
-                                ? "text-blue-500 font-bold"
-                                : "text-gray-500"
-                            } flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `}
-                          >
-                            {futureNoList[0]}
-                          </button>
-                        </li>
-                        <li>
-                          <button
-                            value={1}
-                            onClick={(e) =>
-                              handleLinkClick2(e, futureNoList[1])
-                            }
-                            className={`${
-                              futureNo == futureNoList[1]
-                                ? "text-blue-500 font-bold"
-                                : "text-gray-500"
-                            } flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `}
-                          >
-                            {futureNoList[1]}
-                          </button>
-                        </li>
-                        <li>
-                          <button
-                            value={1}
-                            onClick={(e) =>
-                              handleLinkClick2(e, futureNoList[2])
-                            }
-                            className={`${
-                              futureNo == futureNoList[2]
-                                ? "text-blue-500 font-bold"
-                                : "text-gray-500"
-                            } flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `}
-                          >
-                            {futureNoList[2]}
-                          </button>
-                        </li>
-                        <li>
-                          <button
-                            value={1}
-                            onClick={(e) =>
-                              handleLinkClick2(e, futureNoList[3])
-                            }
-                            className={`${
-                              futureNo == futureNoList[3]
-                                ? "text-blue-500 font-bold"
-                                : "text-gray-500"
-                            } flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `}
-                          >
-                            {futureNoList[3]}
-                          </button>
-                        </li>
-                        <li>
-                          <button
-                            value={1}
-                            onClick={(e) =>
-                              handleLinkClick2(e, futureNoList[4])
-                            }
-                            className={`${
-                              futureNo == futureNoList[4]
-                                ? "text-blue-500 font-bold"
-                                : "text-gray-500"
-                            } flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `}
-                          >
-                            {futureNoList[4]}
-                          </button>
-                        </li>
-                        <li>
-                          <button
-                            onClick={() => handleNextClick2()}
-                            className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 "
-                          >
-                            <FcNext size={10}></FcNext>
-                          </button>
-                        </li>
+                          </li>
+                        ))}
                       </ul>
+                      <div className="flex justify-center my-3">
+                        <ul className="inline-flex -space-x-px text-sm">
+                          <li>
+                            <button
+                              onClick={() => handlePreviousClick2()}
+                              className={`flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 rounded-l-lg`}
+                            >
+                              <FcPrevious size={10}></FcPrevious>{" "}
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              value={1}
+                              onClick={(e) =>
+                                handleLinkClick2(e, futureNoList[0])
+                              }
+                              className={`${
+                                futureNo == futureNoList[0]
+                                  ? "text-blue-500 font-bold"
+                                  : "text-gray-500"
+                              } flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `}
+                            >
+                              {futureNoList[0]}
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              value={1}
+                              onClick={(e) =>
+                                handleLinkClick2(e, futureNoList[1])
+                              }
+                              className={`${
+                                futureNo == futureNoList[1]
+                                  ? "text-blue-500 font-bold"
+                                  : "text-gray-500"
+                              } flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `}
+                            >
+                              {futureNoList[1]}
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              value={1}
+                              onClick={(e) =>
+                                handleLinkClick2(e, futureNoList[2])
+                              }
+                              className={`${
+                                futureNo == futureNoList[2]
+                                  ? "text-blue-500 font-bold"
+                                  : "text-gray-500"
+                              } flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `}
+                            >
+                              {futureNoList[2]}
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              value={1}
+                              onClick={(e) =>
+                                handleLinkClick2(e, futureNoList[3])
+                              }
+                              className={`${
+                                futureNo == futureNoList[3]
+                                  ? "text-blue-500 font-bold"
+                                  : "text-gray-500"
+                              } flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `}
+                            >
+                              {futureNoList[3]}
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              value={1}
+                              onClick={(e) =>
+                                handleLinkClick2(e, futureNoList[4])
+                              }
+                              className={`${
+                                futureNo == futureNoList[4]
+                                  ? "text-blue-500 font-bold"
+                                  : "text-gray-500"
+                              } flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `}
+                            >
+                              {futureNoList[4]}
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              onClick={() => handleNextClick2()}
+                              className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 "
+                            >
+                              <FcNext size={10}></FcNext>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </>
               )}
 
               {/* 세번째 섹션 */}
@@ -510,149 +516,151 @@ export default function Review() {
                   <Spinner></Spinner>
                 </div>
               ) : (
-                <div className="flex flex-col bg-white border border-gray-200 rounded-lg shadow ">
+                <>
                   <h1 className="text-2xl font-bold text-center my-5">
                     칼럼 연구
                   </h1>
-                  <div className="flex flex-col justify-center h-full">
-                    <ul className="h-full justify-start px-10 gap-4 items-center">
-                      {columnData.map((elem, index) => (
-                        <li
-                          key={index * 111}
-                          className="w-full flex-1 pb-3 mx-auto sm:pb-4 border-b-2"
-                        >
-                          <div className="grid grid-cols-4 items-center space-x-4">
-                            <div className="col-span-3">
-                              <button
-                                onClick={() => {
-                                  handleButtonClick(
-                                    elem.title,
-                                    elem.contents,
-                                    ""
-                                  );
-                                }}
-                              >
-                                <div className="line-clamp-2 text-left text-xs lg:text-lg font-bold text-gray-900  dark:text-white">
-                                  {elem.title}
-                                </div>
-                              </button>
-                              {/* <p className="text-sm text-gray-500 dark:text-gray-400">
+                  <div className="flex flex-col p-5 bg-white border border-gray-200 rounded-lg shadow ">
+                    <div className="flex flex-col justify-center h-full">
+                      <ul className="h-full justify-start gap-4 items-center">
+                        {columnData.map((elem, index) => (
+                          <li
+                            key={index * 111}
+                            className="w-full flex-1 pb-3 mx-auto sm:pb-4 border-b-2"
+                          >
+                            <div className="grid grid-cols-4 items-center space-x-4">
+                              <div className="col-span-3">
+                                <button
+                                  onClick={() => {
+                                    handleButtonClick(
+                                      elem.title,
+                                      elem.contents,
+                                      ""
+                                    );
+                                  }}
+                                >
+                                  <div className="line-clamp-2 text-left text-xs lg:text-lg font-bold text-gray-900  dark:text-white">
+                                    {elem.title}
+                                  </div>
+                                </button>
+                                {/* <p className="text-sm text-gray-500 dark:text-gray-400">
                             {elem.contents}
                           </p> */}
-                              <div>
-                                <div className="line-clamp-2 text-xs lg:text-base text-gray-500 dark:text-gray-400">
-                                  <div
-                                    dangerouslySetInnerHTML={{
-                                      __html: elem.contents,
-                                    }}
-                                  />
+                                <div>
+                                  <div className="line-clamp-2 text-xs lg:text-base text-gray-500 dark:text-gray-400">
+                                    <div
+                                      dangerouslySetInnerHTML={{
+                                        __html: elem.contents,
+                                      }}
+                                    />
+                                  </div>
                                 </div>
                               </div>
+                              <div className="col-span-1 text-xs lg:text-base text-center text-gray-900 dark:text-white">
+                                {elem.regiDate}
+                              </div>
                             </div>
-                            <div className="col-span-1 text-xs lg:text-base text-center text-gray-900 dark:text-white">
-                              {elem.regiDate}
-                            </div>
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="flex justify-center my-3">
-                      <ul className="inline-flex -space-x-px text-sm">
-                        <li>
-                          <button
-                            onClick={() => handlePreviousClick3()}
-                            className={`flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 rounded-l-lg`}
-                          >
-                            <FcPrevious size={10}></FcPrevious>
-                          </button>
-                        </li>
-                        <li>
-                          <button
-                            value={1}
-                            onClick={(e) =>
-                              handleLinkClick3(e, columnNoList[0])
-                            }
-                            className={`${
-                              columnNo == columnNoList[0]
-                                ? "text-blue-500 font-bold"
-                                : "text-gray-500"
-                            } flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `}
-                          >
-                            {columnNoList[0]}
-                          </button>
-                        </li>
-                        <li>
-                          <button
-                            value={1}
-                            onClick={(e) =>
-                              handleLinkClick3(e, columnNoList[1])
-                            }
-                            className={`${
-                              columnNo == columnNoList[1]
-                                ? "text-blue-500 font-bold"
-                                : "text-gray-500"
-                            } flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `}
-                          >
-                            {columnNoList[1]}
-                          </button>
-                        </li>
-                        <li>
-                          <button
-                            value={1}
-                            onClick={(e) =>
-                              handleLinkClick3(e, columnNoList[2])
-                            }
-                            className={`${
-                              columnNo == columnNoList[2]
-                                ? "text-blue-500 font-bold"
-                                : "text-gray-500"
-                            } flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `}
-                          >
-                            {columnNoList[2]}
-                          </button>
-                        </li>
-                        <li>
-                          <button
-                            value={1}
-                            onClick={(e) =>
-                              handleLinkClick3(e, columnNoList[3])
-                            }
-                            className={`${
-                              columnNo == columnNoList[3]
-                                ? "text-blue-500 font-bold"
-                                : "text-gray-500"
-                            } flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `}
-                          >
-                            {columnNoList[3]}
-                          </button>
-                        </li>
-                        <li>
-                          <button
-                            value={1}
-                            onClick={(e) =>
-                              handleLinkClick3(e, columnNoList[4])
-                            }
-                            className={`${
-                              columnNo == columnNoList[4]
-                                ? "text-blue-500 font-bold"
-                                : "text-gray-500"
-                            } flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `}
-                          >
-                            {columnNoList[4]}
-                          </button>
-                        </li>
-                        <li>
-                          <button
-                            onClick={() => handleNextClick3()}
-                            className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 "
-                          >
-                            <FcNext size={10}></FcNext>
-                          </button>
-                        </li>
+                          </li>
+                        ))}
                       </ul>
+                      <div className="flex justify-center my-3">
+                        <ul className="inline-flex -space-x-px text-sm">
+                          <li>
+                            <button
+                              onClick={() => handlePreviousClick3()}
+                              className={`flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 rounded-l-lg`}
+                            >
+                              <FcPrevious size={10}></FcPrevious>
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              value={1}
+                              onClick={(e) =>
+                                handleLinkClick3(e, columnNoList[0])
+                              }
+                              className={`${
+                                columnNo == columnNoList[0]
+                                  ? "text-blue-500 font-bold"
+                                  : "text-gray-500"
+                              } flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `}
+                            >
+                              {columnNoList[0]}
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              value={1}
+                              onClick={(e) =>
+                                handleLinkClick3(e, columnNoList[1])
+                              }
+                              className={`${
+                                columnNo == columnNoList[1]
+                                  ? "text-blue-500 font-bold"
+                                  : "text-gray-500"
+                              } flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `}
+                            >
+                              {columnNoList[1]}
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              value={1}
+                              onClick={(e) =>
+                                handleLinkClick3(e, columnNoList[2])
+                              }
+                              className={`${
+                                columnNo == columnNoList[2]
+                                  ? "text-blue-500 font-bold"
+                                  : "text-gray-500"
+                              } flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `}
+                            >
+                              {columnNoList[2]}
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              value={1}
+                              onClick={(e) =>
+                                handleLinkClick3(e, columnNoList[3])
+                              }
+                              className={`${
+                                columnNo == columnNoList[3]
+                                  ? "text-blue-500 font-bold"
+                                  : "text-gray-500"
+                              } flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `}
+                            >
+                              {columnNoList[3]}
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              value={1}
+                              onClick={(e) =>
+                                handleLinkClick3(e, columnNoList[4])
+                              }
+                              className={`${
+                                columnNo == columnNoList[4]
+                                  ? "text-blue-500 font-bold"
+                                  : "text-gray-500"
+                              } flex items-center justify-center px-3 h-8 leading-tightbg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 `}
+                            >
+                              {columnNoList[4]}
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              onClick={() => handleNextClick3()}
+                              className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 "
+                            >
+                              <FcNext size={10}></FcNext>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </>
               )}
             </div>
           </div>

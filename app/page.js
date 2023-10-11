@@ -32,7 +32,7 @@ export default function Home() {
     <div>
     
     <Element name="0"></Element>
-    <div className="bg-white py-1 lg:py-6">
+    <div className="relative py-1 lg:py-6">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto  max-w-2xl text-center mt-16">
           {/* <h2 className="text-base font-semibold leading-7 text-indigo-600">정치/경제 종합 정보 제공</h2> */}

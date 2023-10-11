@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { authOptions } from "../../api/auth/[...nextauth]/route";
 import { getServerSession } from "next-auth";
 import { useState } from "react";
@@ -33,30 +33,38 @@ export default function AddTopic() {
   };
 
   const handleContentsChange = (e) => {
-    // 입력된 텍스트를 상태 변수에 저장
     setInputContents(e.target.value);
   };
+
+  
 
   const fetchData = async () => {
     let url = "";
     if (selectedInputs === "option1") {
       url =
-        "https://mks5ux6whggik4anhr3c5ofdie0abvss.lambda-url.ap-northeast-2.on.aws/addBigKinds";
+        "https://mks5ux6whggik4anhr3c5ofdie0abvss.lambda-url.ap-northeast-2.on.aws//addBigKinds";
     } else if (selectedInputs === "option2") {
       url =
-        "https://mks5ux6whggik4anhr3c5ofdie0abvss.lambda-url.ap-northeast-2.on.aws/addFuturePosting";
+        "https://mks5ux6whggik4anhr3c5ofdie0abvss.lambda-url.ap-northeast-2.on.aws//addFuturePosting";
     } else if (selectedInputs === "option3") {
       url =
-        "https://mks5ux6whggik4anhr3c5ofdie0abvss.lambda-url.ap-northeast-2.on.aws/addColumnPosting";
+        "https://mks5ux6whggik4anhr3c5ofdie0abvss.lambda-url.ap-northeast-2.on.aws//addColumnPosting";
     }
+    
+    // if (inputContents.includes("td style=")) {
+    //   let result = inputContents.replaceAll(
+    //     'td style="',
+    //     `td style="border:1px solid black;`
+    //   );
+    //   setInputContents(result); 
+    // } else if (inputContents.includes("<td>")){
+    //   let result = inputContents.replaceAll(
+    //     '<td>',
+    //     `<td style="border:1px solid black;>`
+    //   );
+    //   setInputContents(result); 
+    // }
 
-    if (inputContents.includes("td style=")) {
-      let result = content.replaceAll(
-        'td style="',
-        `td style="border:1px solid black;`
-      );
-      setInputContents(result);
-    }
     let postInfo = {};
 
     if (selectedInputs === "option1") {
@@ -87,6 +95,10 @@ export default function AddTopic() {
       };
     }
 
+    let changedContents=postInfo.contents.replaceAll('td style="',`td style="border:1px solid black;`).replaceAll("<td>",'<td style="border:1px solid black;>')
+    postInfo.contents=changedContents
+    
+
     try {
       const response = await axios.post(url, [postInfo], {
         headers: {
@@ -99,20 +111,14 @@ export default function AddTopic() {
     }
   };
 
-  const handleButtonClick = () => {
-    console.log("버튼이 클릭되었습니다.");
-    if (inputContents.includes("td style=")) {
-      let result = content.replaceAll(
-        'td style="',
-        `td style="border:1px solid black;`
-      );
-      setInputContents(result);
-    }
-    fetchData();
+  const handleButtonClick = async () => {
+    const updatedContents = inputContents.replaceAll('1', '2');
+    setInputContents(updatedContents)
+    await fetchData();
     router.push("/admin/list");
   };
 
-  console.log("contents:", inputContents);
+
 
   return (
     <>
@@ -202,19 +208,12 @@ export default function AddTopic() {
                     내용
                   </label>
                   <div className="">
-                    {/* <textarea
-                      id="about"
-                      name="about"
-                      rows={3}
-                      className="block h-72 w-full  rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                      value={inputContents}
-                      onChange={handleContentsChange}
-                    /> */}
                     <TextEditor
                       inputContents={inputContents}
                       setInputContents={setInputContents}
                     ></TextEditor>
                   </div>
+                  
                 </div>
               </div>
             </div>

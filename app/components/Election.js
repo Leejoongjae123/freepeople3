@@ -8,7 +8,7 @@ import Policy from '../components/Policy';
 
 export default function Election() {
   return (
-    <div>
+    <div className='lg:px-20'>
       <div className="mx-auto flex-col lg:mx-0">
         <div className='flex items-center'>
             <FcStatistics size='40'></FcStatistics>
@@ -24,7 +24,7 @@ export default function Election() {
           <SearchCard1></SearchCard1>
           <SearchCard2></SearchCard2>
       </div>
-      <div className='justify-center lg:px-10'>
+      <div className='justify-center'>
         <SliderKOSIS></SliderKOSIS>
       </div>    
       <div className='w-full'>

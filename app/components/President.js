@@ -121,7 +121,8 @@ export default function President() {
 
   return (
     <>
-      <div className="items-center mx-auto  lg:mx-0">
+    <div className='lg:px-20'>
+      <div className="items-center mx-auto   lg:mx-0">
         <div className='flex items-center'>
             <FcVoicePresentation size='40'></FcVoicePresentation>
             <h2 className="text-2xl font-bold tracking-tight text-gray-900 md:text-4xl">국민/대통령</h2>
@@ -230,8 +231,8 @@ export default function President() {
           </div>                 
         
         </div>
-        <div className="flex flex-col my-10 text-lg px-12 lg:px-0">
-          <div className=" mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 px-18">
+        <div className="text-xs lg:text-lg flex flex-col my-10 lg:px-0">
+          <div className=" mt-4 grid gap-4 grid-cols-2 lg:grid-cols-6 px-18">
             <div className="flex justify-center items-start rounded-xl bg-white p-4 shadow-lg">
               <div className="flex h-12 w-12 items-center justify-center rounded-full border border-blue-100 bg-blue-50">
                 
@@ -306,6 +307,7 @@ export default function President() {
           <p className="text-base font-semibold text-blue-500 text-right"><Link target='_blank' className='z-50' href='https://finance.naver.com/'>Read more</Link></p>
         </div> 
       </section>
+    </div>
     </>
 
     

@@ -14,7 +14,7 @@ export default function EditTopic(props) {
   
   const router=useRouter()
 
-  console.log(props.params.detail)
+
   let [firstOne,secondOne]=props.params.detail.split("_")
 
   const fetchData = async () => {
@@ -39,7 +39,7 @@ export default function EditTopic(props) {
     fetchData()
   },[])
 
-  console.log('contents:',contents)
+
   const updateArticle = async () => {
     
     if (contents.includes("td style=")) {
@@ -102,7 +102,7 @@ setContents(e.target.value);
         <div className='h-24'></div>
         <div className="space-y-12 mx-10">
           <div className=" border-gray-900/10 pb-12">
-            <h2 className="text-4xl font-semibold leading-7 text-gray-900">게시글 작성</h2>
+            <h2 className="text-4xl font-semibold leading-7 text-gray-900">게시글 수정</h2>
             <p className="py-5 text-3xl mt-1 leading-6 text-gray-600">포스팅하실 글의 내용을 작성해주세요</p>
 
             <div className="mt-10 gap-x-6 gap-y-8">

@@ -80,7 +80,7 @@ export default function Statistics() {
     console.log('category:',category)
     return (
 
-    <div className="w-full mx-auto lg:px-20">
+    <div className="w-full mx-auto">
         <div className="py-8">
             <div className="flex flex-col justify-between w-full md:flex-row">
                 <div className="md:text-center md:my-0">

@@ -100,7 +100,7 @@ export default function Policy() {
       <div className=" py-10 lg:px-20">
         <div className="grid grid-cols-1 gap-8 mb-6 lg:mb-16 md:grid-cols-1">
           <div className="flex flex-col">
-            <div className="relative items-center rounded-lg shadow grid grid-cols-1">
+            <div className="relative items-center rounded-lg shadow-xl grid grid-cols-1">
               <div className="table-container1">
                 <div className="table-auto col-span-2 p-5">
                   <div>
@@ -113,9 +113,9 @@ export default function Policy() {
                       return (
                         <li
                           key={index}
-                          className="w-full items-center space-x-3"
+                          className="w-full items-center space-x-3 border-b"
                         >
-                          <div className="grid grid-cols-5">
+                          <div className="grid grid-cols-5 my-3 items-center">
                             <div className="flex items-center space-x-3 col-span-3">
                               <svg
                                 className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
@@ -145,12 +145,12 @@ export default function Policy() {
                                 </div>
                               </span>
                             </div>
-                            <div className="col-span-1">
+                            <div className="col-span-1 text-center">
                               <p className="font-bold text-gray-6">
                                 {elem.category}
                               </p>
                             </div>
-                            <div className="col-span-1">
+                            <div className="col-span-1 text-center">
                               <span className="whitespace-normal">
                                 {elem.regiDate}
                               </span>
@@ -177,7 +177,7 @@ export default function Policy() {
           </div>
 
           <div>
-            <div className="relative items-center rounded-lg shadow grid grid-cols-1">
+            <div className="relative items-center rounded-lg shadow-xl grid grid-cols-1">
               {/* <img className="p-2 w-1/6 absolute top-0 left-0 object-contain" src="https://freepeopleimage.s3.ap-northeast-2.amazonaws.com/KDI-removebg-preview.png" alt="Jese Avatar"/> */}
               <div className="table-container2">
                 <div className="table-auto col-span-2 p-5">
@@ -191,9 +191,9 @@ export default function Policy() {
                       return (
                         <li
                           key={index}
-                          className="w-full items-center space-x-3"
+                          className="w-full items-center space-x-3 border-b "
                         >
-                          <div className="grid grid-cols-5">
+                          <div className="grid grid-cols-5 my-3">
                             <div className="flex items-center space-x-3 col-span-3">
                               <svg
                                 className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
@@ -223,12 +223,12 @@ export default function Policy() {
                                 </div>
                               </span>
                             </div>
-                            <div className="col-span-1">
+                            <div className="col-span-1 text-center">
                               <p className="font-bold text-gray-6">
                                 {elem.category}
                               </p>
                             </div>
-                            <div className="col-span-1">
+                            <div className="col-span-1 text-center">
                               <span className="whitespace-normal">
                                 {elem.regiDate}
                               </span>
@@ -254,7 +254,7 @@ export default function Policy() {
             </div>
           </div>
           <div>
-            <div className="relative h-full items-center  rounded-lg shadow grid grid-cols-1">
+            <div className="relative h-full items-center  rounded-lg shadow-xl grid grid-cols-1">
               <div className="table-container3">
                 <div className="table-auto col-span-2 p-5">
                   <div>
@@ -267,9 +267,9 @@ export default function Policy() {
                       return (
                         <li
                           key={index}
-                          className="w-full items-center space-x-3"
+                          className="w-full items-center space-x-3 border-b"
                         >
-                          <div className="grid grid-cols-5">
+                          <div className="grid grid-cols-5 my-3">
                             <div className="flex items-center space-x-3 col-span-3">
                               <svg
                                 className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
@@ -299,12 +299,12 @@ export default function Policy() {
                                 </div>
                               </span>
                             </div>
-                            <div className="col-span-1">
+                            <div className="col-span-1 text-center">
                               <p className="font-bold text-gray-6">
                                 {elem.category}
                               </p>
                             </div>
-                            <div className="col-span-1">
+                            <div className="col-span-1 text-center">
                               <span className="whitespace-normal">
                                 {elem.regiDate}
                               </span>
@@ -331,7 +331,7 @@ export default function Policy() {
           </div>
 
           <div>
-            <div className="relative h-full items-center rounded-lg shadow grid grid-cols-1">
+            <div className="relative h-full items-center rounded-lg shadow-xl grid grid-cols-1">
               {/* <img className="absolute p-2 top-0 left-0 w-1/4 object-contain" src="https://freepeopleimage.s3.ap-northeast-2.amazonaws.com/minju-removebg-preview.png" alt="Sofia Avatar"/> */}
               <div className="table-container4">
                 <div className="table-auto col-span-2 p-5">
@@ -345,9 +345,9 @@ export default function Policy() {
                       return (
                         <li
                           key={index}
-                          className="w-full items-center space-x-3"
+                          className="w-full items-center space-x-3 border-b"
                         >
-                          <div className="grid grid-cols-5">
+                          <div className="grid grid-cols-5 my-3">
                             <div className="flex items-center space-x-3 col-span-4">
                               <svg
                                 className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
@@ -373,7 +373,7 @@ export default function Policy() {
                                 {/* <div><a href={elem.downloadUrl}><FcDocument size='30'></FcDocument></a></div>  */}
                               </span>
                             </div>
-                            <div className="col-span-1">
+                            <div className="col-span-1 text-center">
                               <span className="whitespace-normal">
                                 {elem.regiDate}
                               </span>

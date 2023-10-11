@@ -96,60 +96,139 @@ export default function Parliament() {
 
   return (
     <>
-      <div className="mx-auto flex-col lg:mx-0">
-        <div className="flex items-center">
-          <FcVoicePresentation size="40"></FcVoicePresentation>
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            국회/정당
-          </h2>
+      <div className="lg:px-20">
+        <div className="mx-auto flex-col lg:mx-0">
+          <div className="flex items-center">
+            <FcVoicePresentation size="40"></FcVoicePresentation>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              국회/정당
+            </h2>
+          </div>
+          <div>
+            <p className="mt-2 text-lg leading-8 text-gray-600">
+              논평 및 서면 브리핑
+            </p>
+          </div>
         </div>
-        <div>
-          <p className="mt-2 text-lg leading-8 text-gray-600">
-            논평 및 서면 브리핑
-          </p>
-        </div>
-      </div>
 
-      <div className="pt-10 grid gap-8 md:grid-cols-1">
-        <div className="">
+        <div className="pt-10 grid gap-8 md:grid-cols-1">
           <div className="">
-            <h1 className="mb-5 text-2xl font-bold text-center">국민의힘</h1>
-            <div className="relative overflow-x-auto shadow-md sm:rounded-lg bg-white">
+            <div className="">
+              <h1 className="mb-5 text-2xl font-bold text-center">국민의힘</h1>
+              <div className="relative text-xs lg:text-2xl overflow-x-auto shadow-md sm:rounded-lg bg-white">
+                <div className="flex">
+                  {/* <img className="opacity-10 absolute inset-0 w-full h-full object-contain z-0 backdrop-blur-md" src="https://freepeopleimage.s3.ap-northeast-2.amazonaws.com/gukhim-removebg-preview.png"></img> */}
+                  <table className="table-fixed w-full text-sm text-left text-gray-500 ">
+                    <thead className="text-xs lg:text-lg text-gray-700 uppercase bg-gray-50 ">
+                      <tr className="flex-wrap">
+                        <th scope="col" className="text-center py-3 w-1/2">
+                          제목
+                        </th>
+                        <th scope="col" className="text-center py-3 w-1/4">
+                          작성일
+                        </th>
+                        <th scope="col" className="text-center py-3 w-1/2">
+                          제목
+                        </th>
+                        <th scope="col" className="text-center py-3 w-1/4">
+                          작성일
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {gukhimarticle.map((elem, index) => {
+                        return (
+                          <tr
+                            key={index}
+                            className="bg-white border-b text-xs lg:text-lg "
+                          >
+                            <td
+                              scope="row"
+                              className="whitespace-normal pl-4 lg:px-6 py-4 font-medium text-gray-900 "
+                            >
+                              <a target="_blank" href={elem[0].url}>
+                                <span className="font-bold line-clamp-6 lg:line-clamp-2 ">
+                                  {elem[0]["title"]}
+                                </span>
+                              </a>
+                              <span className=" text-cyan-600">
+                                {elem[0]["category"]}
+                              </span>
+                            </td>
+                            <td className="text-center lg:truncate w-1/4 py-4">
+                              {elem[0]["regiDate"]}
+                            </td>
+                            <td
+                              scope="row"
+                              className="whitespace-normal pl-4 lg:px-6 py-4 font-medium text-gray-900 "
+                            >
+                              <a target="_blank" href={elem[1].url}>
+                                <p className="font-bold line-clamp-6 lg:line-clamp-2">
+                                  {elem[1]["title"]}
+                                </p>
+                              </a>
+                              <span className="text-cyan-600">
+                                {elem[1]["category"]}
+                              </span>
+                            </td>
+                            <td className="text-center lg:truncate w-1/4 py-4">
+                              {elem[1]["regiDate"]}
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div className="text-right my-3 pr-5">
+                <p className="text-base font-semibold text-blue-500 text-right">
+                  <Link
+                    target="_blank"
+                    className="z-50"
+                    href="https://www.peoplepowerparty.kr/news/comment/BBSDD0001"
+                  >
+                    Read more
+                  </Link>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div className="flex justify-center mx-auto">
+              <h1 className="mb-5 text-2xl font-bold text-center">
+                더불어민주당
+              </h1>
+            </div>
+
+            <div className="relative text-xs lg:text-lg overflow-x-auto shadow-md sm:rounded-lg bg-white">
               <div className="flex">
-                {/* <img className="opacity-10 absolute inset-0 w-full h-full object-contain z-0 backdrop-blur-md" src="https://freepeopleimage.s3.ap-northeast-2.amazonaws.com/gukhim-removebg-preview.png"></img> */}
-                <table className="table-fixed w-full text-sm text-left text-gray-500 ">
+                {/* <img className="opacity-10 absolute inset-0 w-full h-full object-contain z-0 backdrop-blur-md" src="https://freepeopleimage.s3.ap-northeast-2.amazonaws.com/dubul-removebg-preview.png"></img> */}
+                <table className="table-fixed w-full text-sm text-left text-gray-500">
                   <thead className="text-xs lg:text-lg text-gray-700 uppercase bg-gray-50 ">
-                    <tr className="flex-wrap">
-                      <th
-                        scope="col"
-                        className="text-center py-3 w-1/2"
-                      >
+                    <tr>
+                      <th scope="col" className="text-center py-3 w-1/2">
                         제목
                       </th>
-                      <th
-                        scope="col"
-                        className="text-center py-3 w-1/4"
-                      >
+                      <th scope="col" className="text-center py-3 w-1/4">
                         작성일
                       </th>
-                      <th
-                        scope="col"
-                        className="text-center py-3 w-1/2"
-                      >
+                      <th scope="col" className="text-center px-6 py-3 w-1/2">
                         제목
                       </th>
-                      <th
-                        scope="col"
-                        className="text-center py-3 w-1/4"
-                      >
+                      <th scope="col" className="text-center py-3 w-1/4">
                         작성일
                       </th>
                     </tr>
                   </thead>
                   <tbody>
-                    {gukhimarticle.map((elem, index) => {
+                    {minjuarticle.map((elem, index) => {
                       return (
-                        <tr key={index} className="bg-white border-b text-sm lg:text-lg ">
+                        <tr
+                          key={index}
+                          className="bg-white border-b text-xs lg:text-lg"
+                        >
                           <td
                             scope="row"
                             className="whitespace-normal pl-4 lg:px-6 py-4 font-medium text-gray-900 "
@@ -159,7 +238,7 @@ export default function Parliament() {
                                 {elem[0]["title"]}
                               </span>
                             </a>
-                            <span className="text-base text-cyan-600">
+                            <span className="text-cyan-600">
                               {elem[0]["category"]}
                             </span>
                           </td>
@@ -175,7 +254,7 @@ export default function Parliament() {
                                 {elem[1]["title"]}
                               </p>
                             </a>
-                            <span className="text-base text-cyan-600">
+                            <span className="text-cyan-600">
                               {elem[1]["category"]}
                             </span>
                           </td>
@@ -194,95 +273,99 @@ export default function Parliament() {
                 <Link
                   target="_blank"
                   className="z-50"
-                  href="https://www.peoplepowerparty.kr/news/comment/BBSDD0001"
+                  href="https://theminjoo.kr/main/sub/news/list.php?brd=11"
                 >
                   Read more
                 </Link>
               </p>
             </div>
           </div>
-        </div>
 
-        <div>
-          <div className="flex justify-center mx-auto">
+          <div className="table-container1">
             <h1 className="mb-5 text-2xl font-bold text-center">
-              더불어민주당
+              국회입법조사처
             </h1>
-          </div>
-
-          <div className="relative overflow-x-auto shadow-md sm:rounded-lg bg-white">
-            <div className="flex">
-              {/* <img className="opacity-10 absolute inset-0 w-full h-full object-contain z-0 backdrop-blur-md" src="https://freepeopleimage.s3.ap-northeast-2.amazonaws.com/dubul-removebg-preview.png"></img> */}
-              <table className="table-fixed w-full text-sm text-left text-gray-500">
-                <thead className="text-xs lg:text-lg text-gray-700 uppercase bg-gray-50 ">
-                  <tr>
-                    <th
-                      scope="col"
-                      className="text-center py-3 w-1/2"
-                    >
-                      제목
-                    </th>
-                    <th
-                      scope="col"
-                      className="text-center py-3 w-1/4"
-                    >
-                      작성일
-                    </th>
-                    <th
-                      scope="col"
-                      className="text-center px-6 py-3 w-1/2"
-                    >
-                      제목
-                    </th>
-                    <th
-                      scope="col"
-                      className="text-center py-3 w-1/4"
-                    >
-                      작성일
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {minjuarticle.map((elem, index) => {
-                    return (
-                      <tr key={index} className="bg-white border-b text-sm lg:text-lg">
-                        <td
-                          scope="row"
-                          className="whitespace-normal pl-4 lg:px-6 py-4 font-medium text-gray-900 "
-                        >
-                          <a target="_blank" href={elem[0].url}>
-                            <span className="font-bold line-clamp-6 lg:line-clamp-2 ">
-                              {elem[0]["title"]}
-                            </span>
-                          </a>
-                          <span className="text-cyan-600">
-                            {elem[0]["category"]}
-                          </span>
-                        </td>
-                        <td className="text-center lg:truncate w-1/4 py-4">
-                          {elem[0]["regiDate"]}
-                        </td>
-                        <td
-                          scope="row"
-                          className="whitespace-normal pl-4 lg:px-6 py-4 font-medium text-gray-900 "
-                        >
-                          <a target="_blank" href={elem[1].url}>
-                            <p className="font-bold line-clamp-6 lg:line-clamp-2">
-                              {elem[1]["title"]}
-                            </p>
-                          </a>
-                          <span className="text-cyan-600">
-                            {elem[1]["category"]}
-                          </span>
-                        </td>
-                        <td className="text-center lg:truncate w-1/4 py-4">
-                          {elem[1]["regiDate"]}
-                        </td>
+            <div className="w-full relative overflow-x-auto shadow-md sm:rounded-lg bg-white">
+              <div className="w-full">
+                <div className="flex z-10">
+                  <table className="table-fixed w-full text-sm text-left text-gray-500 ">
+                    <thead className="text-gray-700 uppercase bg-gray-50 ">
+                      <tr className="text-xs lg:text-lg">
+                        <th scope="col" className="text-center py-3 w-1/2">
+                          제목
+                        </th>
+                        <th scope="col" className="text-center  py-3 w-1/4">
+                          작성일
+                        </th>
+                        <th scope="col" className="text-center  py-3 w-1/2">
+                          제목
+                        </th>
+                        <th scope="col" className="text-center  py-3 w-1/4">
+                          작성일
+                        </th>
                       </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
+                    </thead>
+                    <tbody>
+                      {parliamentCreator.map((elem, index) => {
+                        return (
+                          <tr
+                            key={index}
+                            className="bg-white border-b text-xs lg:text-lg"
+                          >
+                            <td
+                              scope="row"
+                              className="whitespace-normal pl-2 lg:px-6 py-4 font-medium text-gray-900"
+                            >
+                              <div className="flex items-center">
+                                <p className="font-bold line-clamp-6 lg:line-clamp-2">
+                                  <a target="_blank" href={elem[0].url}>
+                                    {elem[0]["title"]}{" "}
+                                  </a>
+                                </p>
+                                <a href={elem[0].downloadUrl}>
+                                  <FcDocument size="30"></FcDocument>
+                                </a>
+                              </div>
+
+                              <span className="text-cyan-600">
+                                {elem[0]["writer"]}
+                              </span>
+                            </td>
+                            <td className="text-center lg:truncate w-1/4 py-4">
+                              {elem[0]["regiDate"]}
+                            </td>
+                            <td
+                              scope="row"
+                              className="whitespace-normal pl-2 lg:px-6 py-4 font-medium text-gray-900"
+                            >
+                              <div className="flex items-center">
+                                <p className="font-bold line-clamp-6 lg:line-clamp-2">
+                                  <a target="_blank" href={elem[1].url}>
+                                    {elem[1]["title"]}
+                                  </a>
+                                </p>
+                                <a href={elem[1].downloadUrl}>
+                                  <FcDocument size="30"></FcDocument>
+                                </a>
+                                <p>
+                                  {elem.downloadUrl}
+                                </p>
+                              </div>
+
+                              <span className="text-cyan-600">
+                                {elem[1]["writer"]}
+                              </span>
+                            </td>
+                            <td className="text-center lg:truncate w-1/4 py-4">
+                              {elem[1]["regiDate"]}
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
           <div className="text-right my-3 pr-5">
@@ -290,117 +373,12 @@ export default function Parliament() {
               <Link
                 target="_blank"
                 className="z-50"
-                href="https://theminjoo.kr/main/sub/news/list.php?brd=11"
+                href="https://www.nars.go.kr/report/list.do?cmsCode=CM0043"
               >
                 Read more
               </Link>
             </p>
           </div>
-        </div>
-
-        <div className="table-container1">
-          <h1 className="mb-5 text-2xl font-bold text-center">
-            국회입법조사처
-          </h1>
-          <div className="w-full relative overflow-x-auto shadow-md sm:rounded-lg bg-white">
-            <div className="w-full">
-              <div className="flex z-10">
-                <table className="table-fixed w-full text-sm text-left text-gray-500 ">
-                  <thead className="text-gray-700 uppercase bg-gray-50 ">
-                    <tr className="text-xs lg:text-lg">
-                      <th
-                        scope="col"
-                        className="text-center py-3 w-1/2"
-                      >
-                        제목
-                      </th>
-                      <th
-                        scope="col"
-                        className="text-center  py-3 w-1/4"
-                      >
-                        작성일
-                      </th>
-                      <th
-                        scope="col"
-                        className="text-center  py-3 w-1/2"
-                      >
-                        제목
-                      </th>
-                      <th
-                        scope="col"
-                        className="text-center  py-3 w-1/4"
-                      >
-                        작성일
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {parliamentCreator.map((elem, index) => {
-                      return (
-                        <tr key={index} className="bg-white border-b text-sm lg:text-lg">
-                          <td
-                            scope="row"
-                            className="whitespace-normal pl-2 lg:px-6 py-4 font-medium text-gray-900"
-                          >
-                            <div className="flex items-center">
-                              <p className="font-bold line-clamp-6 lg:line-clamp-2">
-                                <a target="_blank" href={elem[0].url}>
-                                  {elem[0]["title"]}{" "}
-                                </a>
-                              </p>
-                              <a href={elem.downloadUrl}>
-                                <FcDocument size="30"></FcDocument>
-                              </a>
-                            </div>
-
-                            <span className="text-cyan-600">
-                              {elem[0]["writer"]}
-                            </span>
-                          </td>
-                          <td className="text-center lg:truncate w-1/4 py-4">
-                            {elem[0]["regiDate"]}
-                          </td>
-                          <td
-                            scope="row"
-                            className="whitespace-normal pl-2 lg:px-6 py-4 font-medium text-gray-900"
-                          >
-                            <div className="flex items-center">
-                              <p className="font-bold line-clamp-6 lg:line-clamp-2">
-                                <a target="_blank" href={elem[1].url}>
-                                  {elem[1]["title"]}
-                                </a>
-                              </p>
-                              <a href="https://www.naver.com">
-                                <FcDocument size="30"></FcDocument>
-                              </a>
-                            </div>
-
-                            <span className="text-cyan-600">
-                              {elem[1]["writer"]}
-                            </span>
-                          </td>
-                          <td className="text-center lg:truncate w-1/4 py-4">
-                            {elem[1]["regiDate"]}
-                          </td>
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="text-right my-3 pr-5">
-          <p className="text-base font-semibold text-blue-500 text-right">
-            <Link
-              target="_blank"
-              className="z-50"
-              href="https://www.nars.go.kr/report/list.do?cmsCode=CM0043"
-            >
-              Read more
-            </Link>
-          </p>
         </div>
       </div>
     </>
