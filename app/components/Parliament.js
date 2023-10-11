@@ -140,7 +140,7 @@ export default function Parliament() {
                         return (
                           <tr
                             key={index}
-                            className="flex flex-colbg-white border-b text-xs lg:text-lg "
+                            className="flexbg-white border-b text-xs lg:text-lg "
                           >
                             <td
                               scope="row"
