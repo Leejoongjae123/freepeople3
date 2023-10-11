@@ -6,6 +6,7 @@ import { authOptions } from '../../../api/auth/[...nextauth]/route'
 import axios from 'axios'
 import { useRouter,usePathname } from 'next/navigation';
 import Link from 'next/link';
+import TextEditor from "@/app/components/TextEditor";
 
 export default function EditTopic(props) {
   const [title, setTitle] = useState("");
@@ -38,7 +39,17 @@ export default function EditTopic(props) {
     fetchData()
   },[])
 
+  console.log('contents:',contents)
   const updateArticle = async () => {
+    
+    if (contents.includes("td style=")) {
+      let result = contents.replaceAll(
+        'td style="',
+        `td style="border:1px solid black;`
+      );
+      setContents(result);
+    }
+
     try {
       const response = await axios.post(
         'https://mks5ux6whggik4anhr3c5ofdie0abvss.lambda-url.ap-northeast-2.on.aws/updateOnePosting',
@@ -142,7 +153,7 @@ setContents(e.target.value);
                   내용
                 </label>
                 <div className="">
-                  <textarea
+                  {/* <textarea
                     id="about"
                     name="about"
                     rows={3}
@@ -150,7 +161,11 @@ setContents(e.target.value);
                     defaultValue={''}
                     value={contents}
                     onChange={handleContentsChange}
-                  />
+                  /> */}
+                  <TextEditor
+                    inputContents={contents}
+                    setInputContents={setContents}
+                  ></TextEditor>
                   </div>
                   </div>
 
@@ -202,7 +217,8 @@ setContents(e.target.value);
               </fieldset> */}
             </div>
           </div>
-        </div>
+        </div>  
+        {contents}
 
         <div className="my-10 flex items-center justify-end gap-x-6 mx-10">
 

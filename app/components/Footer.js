@@ -23,76 +23,101 @@ export default function Footer() {
     return (
     <div>
       {isBase&&(
-        <div>
+      
+<footer className="bg-white dark:bg-gray-900">
+    <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div className="md:flex md:justify-between">
+          <div className="mb-6 md:mb-0">
+              <a href="https://flowbite.com/" className="flex items-center">
+                  <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">미래민중</span>
+              </a>
+          </div>
+          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+              <div>
+                  <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">INTRODUCTION</h2>
+                  <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                      <li className="h-10">
+                          <FooterModal></FooterModal>
+                      </li>
+                      <li className="h-10">
+                      <ServiceModal></ServiceModal>
+                      </li>
+                      <li className="h-10">
+                        개인정보처리 방침
+                      </li>
+                  </ul>
+              </div>
+              <div>
+                  <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">CONTACT US</h2>
+                  <ul className="flex flex-col text-gray-500 dark:text-gray-400 font-medium">
+                      <li className="h-10">
+                          제휴협력 및 연구용역의뢰
+                      </li>
+
+                      <li className="h-10">
+                        wsfran@naver.com
+                      </li>
+                  </ul>
+              </div>
+              <div>
+                  <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">INFORMATION</h2>
+                  <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                    <li className="h-10">
+                      등록번호 : XXX-XXX-XXXX
+                    </li>
+                    <li className="h-10">
+                      등록일자 : 2023-10-11
+                    </li>
+                    <li className="h-10">
+                      발행일 : 2023-10-11
+                    </li>
+                    <li className="h-10">
+                      발행인 : 정우식
+                    </li>
+                    <li className="h-10">
+                      편집인 : 정우식
+                    </li>
+                      
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <div className="sm:flex sm:items-center sm:justify-between">
+          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 재인융합경제연구소 All Rights Reserved.
+          </span>
+          
+      </div>
+    </div>
+</footer>
+
+    //     <div>
       
     
       
-        <footer className="bg-gray-500 dark:bg-gray-900">
-          <div className="px-20">
-            <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-3">
-              <div className='mx-auto'>
-                  <h2 className="mb-6 text-lg font-semibold text-gray-900 uppercase dark:text-white">소개</h2>
-                  <ul className="text-black dark:text-gray-400 font-medium">
-                      <li className="mb-4">
-                        {/* <Link href="/about" className="hover:underline">미래민중은</Link> */}
-                        <FooterModal></FooterModal>
-                      </li>
-                      <li className="mb-4">
-                        {/* <Link href="/service" className="hover:underline">서비스범위</Link> */}
-                        <ServiceModal></ServiceModal>
-                      </li>
-                  </ul>
-              </div>
-              <div className='mx-auto'>
-                  <h2 className="mb-6 text-lg font-semibold text-gray-900 uppercase dark:text-white">제휴협력 및 연구의뢰</h2>
-                  <ul className="text-black dark:text-gray-400 font-medium">
-                      <li className="mb-4">
-                          <a href="http://www.realmeter.net/%EC%A1%B0%EC%82%AC%EC%9D%98%EB%A2%B0/" target='_blank' className="hover:underline">리얼미터</a>
-                      </li>
-                      <li className="mb-4">
-                          <a href="https://www.gallup.co.kr/inquiry/askResearch.asp" target='_blank' className="hover:underline">갤럽</a>
-                      </li>
-                  </ul>
-              </div>
-              <div className='mx-auto'>
-                  <h2 className="mb-6 text-lg font-semibold text-gray-900 uppercase dark:text-white">관리자센터</h2>
-                  <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                      <li className="mb-4">
-                      <LoginBtn></LoginBtn>
-                        
+    //     <footer className="bg-gray-500 dark:bg-gray-900">
+    //       <div className="px-20">
+    //         <div className="gap-8 px-4 py-6">
+    //               <div className="flex-1 w-full flex ">
+    //                   <div><FooterModal></FooterModal></div>
+    //                   <div><ServiceModal></ServiceModal></div>
+    //           </div>
+              
+            
+    //       </div>
 
 
-                      </li>
-                      <li>
-                      
-
-
-
-
-                          <button
-                          type="submit"
-                          className="flex justify-center rounded-md bg-gray-200 px-3 py-1.5 text-sm font-semibold leading-6 text-black shadow-sm hover:bg-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                          >
-                        <a href='/admin/list'>
-                        관리자 사이트로 이동
-                        </a>
-                        </button>
-
-                 
-                      
-
-                      
-                      </li>
-                  </ul>
-
-              </div>
-          </div>
-
-
-          </div>
-      
-      </footer>
-    </div>
+    //       </div>
+    //       <button
+    //                       type="submit"
+    //                       className="flex justify-center rounded-md bg-gray-200 px-3 py-1.5 text-sm font-semibold leading-6 text-black shadow-sm hover:bg-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+    //                       >
+    //                     <a href='/admin/list'>
+    //                     관리자 사이트로 이동
+    //                     </a>
+    //                     </button>
+    //   </footer>
+    // </div>
       )}
     </div> 
     
