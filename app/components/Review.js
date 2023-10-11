@@ -220,11 +220,11 @@ export default function Review() {
                             );
                           }}
                         >
-                          <h5 className="text-center mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white">
+                          <h5 className="text-center mb-2 text-xs lg:text-lg font-bold tracking-tight text-gray-900 dark:text-white">
                             {bigKindsData.title}
                           </h5>
                         </button>
-                        <div className="whitespace-normal line-clamp-6 mb-3 text-base font-normal text-gray-700 dark:text-gray-400">
+                        <div className="whitespace-normal line-clamp-6 mb-3 text-xs lg:text-base font-normal text-gray-700 dark:text-gray-400">
                           <div
                             dangerouslySetInnerHTML={{
                               __html: bigKindsData.contents,
@@ -380,7 +380,7 @@ export default function Review() {
                                   );
                                 }}
                               >
-                                <div className="line-clamp-2 text-left text-lg font-bold text-gray-900  dark:text-white">
+                                <div className="line-clamp-2 text-left text-xs lg:text-lg font-bold text-gray-900  dark:text-white">
                                   {elem.title}
                                 </div>
                               </button>
@@ -388,7 +388,7 @@ export default function Review() {
                             {elem.contents}
                           </p> */}
                               <div>
-                                <div className="line-clamp-2 text-base text-gray-500 dark:text-gray-400">
+                                <div className="line-clamp-2 text-xs lg:text-base text-gray-500 dark:text-gray-400">
                                   <div
                                     dangerouslySetInnerHTML={{
                                       __html: elem.contents,
@@ -397,7 +397,7 @@ export default function Review() {
                                 </div>
                               </div>
                             </div>
-                            <div className="col-span-1 text- text-center text-gray-900 dark:text-white">
+                            <div className="col-span-1 text-xs lg:text-base text-center text-gray-900 dark:text-white">
                               {elem.regiDate}
                             </div>
                           </div>
@@ -532,7 +532,7 @@ export default function Review() {
                                   );
                                 }}
                               >
-                                <div className="line-clamp-2 text-left text-lg font-bold text-gray-900  dark:text-white">
+                                <div className="line-clamp-2 text-left text-xs lg:text-lg font-bold text-gray-900  dark:text-white">
                                   {elem.title}
                                 </div>
                               </button>
@@ -540,7 +540,7 @@ export default function Review() {
                             {elem.contents}
                           </p> */}
                               <div>
-                                <div className="line-clamp-2 text-base text-gray-500 dark:text-gray-400">
+                                <div className="line-clamp-2 text-xs lg:text-base text-gray-500 dark:text-gray-400">
                                   <div
                                     dangerouslySetInnerHTML={{
                                       __html: elem.contents,
@@ -549,7 +549,7 @@ export default function Review() {
                                 </div>
                               </div>
                             </div>
-                            <div className="col-span-1 text- text-center text-gray-900 dark:text-white">
+                            <div className="col-span-1 text-xs lg:text-base text-center text-gray-900 dark:text-white">
                               {elem.regiDate}
                             </div>
                           </div>

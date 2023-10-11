@@ -65,7 +65,7 @@ export default function PresidentSlider() {
                 <Image src={elem.imageSrc} fill  className="object-cover"/>
               </div>
               <a href={elem.url} target="_blank">
-              <p className="text-lg line-clamp-2 font-bold font-black ">
+              <p className="text-xs lg:text-lg line-clamp-2 font-bold font-black ">
                 {elem.title}
               </p>
               </a>

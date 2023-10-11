@@ -81,7 +81,8 @@ export default function Policy() {
   console.log("kdistatus:", kdistatus);
 
   return (
-    <>
+    <div className="text-xs lg:text-lg">
+    
       <div className="mx-auto flex-col lg:mx-0">
         <div className="flex items-center">
           <FcDocument size="40"></FcDocument>
@@ -90,7 +91,7 @@ export default function Policy() {
           </h2>
         </div>
         <div>
-          <p className="mt-2 text-lg leading-8 text-gray-600">
+          <p className="mt-2 leading-8 text-gray-600">
             주요 정책 및 동향
           </p>
         </div>
@@ -131,7 +132,7 @@ export default function Policy() {
                                   d="M1 5.917 5.724 10.5 15 1.5"
                                 />
                               </svg>
-                              <span className="flex items-center text-lg text-black font-bold whitespace-normal">
+                              <span className="flex items-center text-black font-bold whitespace-normal">
                                 <p>
                                   <a target="_blank" href={elem.url}>
                                     {elem.title}
@@ -209,7 +210,7 @@ export default function Policy() {
                                   d="M1 5.917 5.724 10.5 15 1.5"
                                 />
                               </svg>
-                              <span className="flex items-center text-lg text-black font-bold whitespace-normal">
+                              <span className="flex items-center text-black font-bold whitespace-normal">
                                 <p>
                                   <a target="_blank" href={elem.url}>
                                     {elem.title}
@@ -285,7 +286,7 @@ export default function Policy() {
                                   d="M1 5.917 5.724 10.5 15 1.5"
                                 />
                               </svg>
-                              <span className="flex items-center text-lg text-black font-bold whitespace-normal">
+                              <span className="flex items-center text-black font-bold whitespace-normal">
                                 <p>
                                   <a target="_blank" href={elem.url}>
                                     {elem.title}
@@ -363,7 +364,7 @@ export default function Policy() {
                                   d="M1 5.917 5.724 10.5 15 1.5"
                                 />
                               </svg>
-                              <span className="flex text-lg text-black font-bold whitespace-normal">
+                              <span className="flex text-black font-bold whitespace-normal">
                                 <p>
                                   <a target="_blank" href={elem.url}>
                                     {elem.title}
@@ -399,6 +400,6 @@ export default function Policy() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
