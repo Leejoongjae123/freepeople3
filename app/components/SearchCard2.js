@@ -827,32 +827,32 @@ export default function SearchCard1() {
               )}
             </div>
           </div>
-          <div className="py-4">
+          <div className="py-4 text-xs lg:text-lg">
             <div className="inline-block w-full overflow-hidden rounded-lg shadow">
               <table className="w-full h-full leading-normal">
-                <thead className="text-xs text-gray-700 uppercase bg-gray-50 ">
+                <thead className=" text-gray-700 uppercase bg-gray-50 ">
                   <tr>
                     <th
                       scope="col"
-                      className="font-bold text-lg text-center px-6 py-3 w-1/4"
+                      className="font-bold text-center px-6 py-3 w-1/4"
                     >
                       정당
                     </th>
                     <th
                       scope="col"
-                      className="font-bold text-lg text-center px-6 py-3 w-1/4"
+                      className="font-bold text-center px-6 py-3 w-1/4"
                     >
                       후보자
                     </th>
                     <th
                       scope="col"
-                      className="font-bold text-lg text-center px-6 py-3 w-1/4"
+                      className="font-bold text-center px-6 py-3 w-1/4"
                     >
                       득표수
                     </th>
                     <th
                       scope="col"
-                      className="font-bold text-lg text-center px-6 py-3 w-1/4"
+                      className="font-bold text-center px-6 py-3 w-1/4"
                     >
                       득표율(%)
                     </th>
@@ -861,42 +861,42 @@ export default function SearchCard1() {
                 <tbody>
                   {electionResult["result"].map((elem, index) => {
                     return (
-                      <tr key={index}>
-                        <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                      <tr key={index} className="">
+                        <td className="px-5 py-5 bg-white border-b border-gray-200">
                           <div className="flex items-center justify-center">
                             <div className="flex-shrink-0"></div>
                             <div className="">
-                              <p className="text-lg font-bold mx-auto text-center whitespace-pre-wrap text-gray-900 whitespace-no-wrap">
+                              <p className="font-bold mx-auto text-center whitespace-pre-wrap text-gray-900 whitespace-no-wrap">
                                 {elem[0]}
                               </p>
                             </div>
                           </div>
                         </td>
-                        <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                        <td className="px-5 py-5 bg-white border-b border-gray-200">
                           <div className="flex items-center justify-center">
                             <div className="flex-shrink-0"></div>
                             <div className="">
-                              <p className="text-lg font-bold text-center whitespace-pre-wrap text-gray-900 whitespace-no-wrap">
+                              <p className="font-bold text-center whitespace-pre-wrap text-gray-900 whitespace-no-wrap">
                                 {elem[1]}
                               </p>
                             </div>
                           </div>
                         </td>
-                        <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                        <td className="px-5 py-5 bg-white border-b border-gray-200">
                           <div className="flex items-center justify-center">
                             <div className="flex-shrink-0"></div>
                             <div className="">
-                              <p className=" text-lg font-bold text-center whitespace-pre-wrap text-gray-900 whitespace-no-wrap">
+                              <p className="font-bold text-center whitespace-pre-wrap text-gray-900 whitespace-no-wrap">
                                 {elem[2]}
                               </p>
                             </div>
                           </div>
                         </td>
-                        <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                        <td className="px-5 py-5 bg-white border-b border-gray-200">
                           <div className="flex items-center justify-center">
                             <div className="flex-shrink-0"></div>
                             <div className="">
-                              <p className=" text-lg font-bold text-center whitespace-pre-wrap text-gray-900 whitespace-no-wrap">
+                              <p className="font-bold text-center whitespace-pre-wrap text-gray-900 whitespace-no-wrap">
                                 {(
                                   (elem[2] / electionResult["effectiveCount"]) *
                                   100

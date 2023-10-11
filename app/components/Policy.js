@@ -131,7 +131,7 @@ export default function Policy() {
                                   d="M1 5.917 5.724 10.5 15 1.5"
                                 />
                               </svg>
-                              <span className="flex text-lg text-black font-bold whitespace-normal">
+                              <span className="flex items-center text-lg text-black font-bold whitespace-normal">
                                 <p>
                                   <a target="_blank" href={elem.url}>
                                     {elem.title}
@@ -209,7 +209,7 @@ export default function Policy() {
                                   d="M1 5.917 5.724 10.5 15 1.5"
                                 />
                               </svg>
-                              <span className="flex text-lg text-black font-bold whitespace-normal">
+                              <span className="flex items-center text-lg text-black font-bold whitespace-normal">
                                 <p>
                                   <a target="_blank" href={elem.url}>
                                     {elem.title}
@@ -285,7 +285,7 @@ export default function Policy() {
                                   d="M1 5.917 5.724 10.5 15 1.5"
                                 />
                               </svg>
-                              <span className="flex text-lg text-black font-bold whitespace-normal">
+                              <span className="flex items-center text-lg text-black font-bold whitespace-normal">
                                 <p>
                                   <a target="_blank" href={elem.url}>
                                     {elem.title}

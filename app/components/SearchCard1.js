@@ -213,14 +213,14 @@ export default function SearchCard1() {
               )}
             </div>
           </div>
-          <div className="py-4">
+          <div className="py-4 text-xs lg:text-lg">
             <div className="inline-block min-w-full overflow-hidden rounded-lg shadow">
               <table className="min-w-full leading-normal">
-                <thead className="text-xs text-gray-700 uppercase bg-gray-50 ">
+                <thead className=" text-gray-700 uppercase bg-gray-50 ">
                   <tr>
                     <th
                       scope="col"
-                      className="font-bold text-lg text-center py-3 w-1/2"
+                      className="font-bold text-center py-3 w-1/2"
                     >
                       정책명
                     </th>
@@ -229,8 +229,8 @@ export default function SearchCard1() {
                 <tbody>
                   {partyData.map((elem, index) => {
                     return (
-                      <tr key={index}>
-                        <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                      <tr key={index} className="">
+                        <td className="px-5 py-5 bg-white border-b border-gray-200">
                           <div className="flex items-center">
                             <div className="flex-shrink-0"></div>
                             <div className="ml-3">
@@ -243,7 +243,7 @@ export default function SearchCard1() {
                                   );
                                 }}
                               >
-                                <p className="text-lg font-bold whitespace-pre-wrap text-gray-900 whitespace-no-wrap">
+                                <p className="font-bold whitespace-pre-wrap text-gray-900 whitespace-no-wrap">
                                   {elem.title}
                                 </p>
                               </button>

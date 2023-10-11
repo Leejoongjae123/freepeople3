@@ -186,7 +186,7 @@ export default function Review() {
           </div>
 
           <div className="flex flex-col justify-center  pt-10 ">
-            <div className="lg:px-20">
+            <div className="">
               {bigKindsLoading ? (
                 <div className="flex w-full h-full">
                   <Spinner></Spinner>
@@ -350,7 +350,7 @@ export default function Review() {
                 </>
               )}
             </div>
-            <div className="mx-auto grid grid-cols-1 gap-x-8 gap-y-5 lg:px-20  pt-6 mt-6 lg:mx-0 lg:grid-cols-1">
+            <div className="mx-auto grid grid-cols-1 gap-x-8 gap-y-5 pt-6 mt-6 lg:mx-0 lg:grid-cols-1">
               {/* 두번째 섹션 */}
 
               {futureLoading ? (

@@ -104,48 +104,48 @@ export default function Statistics() {
                   </form>
                 </div>
             </div>
-                <div className="px-4 py-4 -mx-4 overflow-x-auto sm:-mx-8 sm:px-8">
+                <div className="py-4 -mx-4 overflow-x-auto sm:px-8 text-xs lg:text-lg">
                     <div className="inline-block min-w-full overflow-hidden rounded-lg shadow">
                         <table className="w-full leading-normal">
                             <thead>
-                                <tr>
-                                    <th scope="col" className=" px-5 py-3 text-lg font-bold text-center text-gray-800 uppercase bg-white border-b border-gray-200">
+                                <tr className=''>
+                                    <th scope="col" className=" px-5 py-3 font-bold text-center text-gray-800 uppercase bg-white border-b border-gray-200">
                                         카테고리
                                     </th>
-                                    <th scope="col" className="px-5 py-3 text-lg font-bold text-center text-gray-800 uppercase bg-white border-b border-gray-200">
+                                    <th scope="col" className="px-5 py-3 font-bold text-center text-gray-800 uppercase bg-white border-b border-gray-200">
                                         이름
                                     </th>
-                                    <th scope="col" className="px-5 py-3 text-lg font-bold text-center text-gray-800 uppercase bg-white border-b border-gray-200">
+                                    <th scope="col" className="px-5 py-3 font-bold text-center text-gray-800 uppercase bg-white border-b border-gray-200">
                                         값
                                     </th>
-                                    <th scope="col" className="px-5 py-3 text-lg font-bold text-center text-gray-800 uppercase bg-white border-b border-gray-200">
+                                    <th scope="col" className="px-5 py-3 font-bold text-center text-gray-800 uppercase bg-white border-b border-gray-200">
                                         시점
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody className=''>
 
                                   {koreaBank.map((elem,index)=>{
                                     return(
-                                      <tr className='text-lg font-bold w-full' key={index}>
-                                        <td className="w-1/4 px-5 py-5 text-md bg-white border-b border-gray-200">
-                                          <p className="text-gray-900 text-lg whitespace-no-wrap text-center">
+                                      <tr className=' font-bold w-full' key={index}>
+                                        <td className="w-1/4 px-5 py-5 bg-white border-b border-gray-200">
+                                          <p className="text-gray-900 whitespace-no-wrap text-center">
                                             {elem.CLASS_NAME}  
                                           </p>
                                         </td>
-                                        <td className="w-1/4 px-5 py-5 text-md bg-white border-b border-gray-200">
-                                          <p className="text-gray-900 text-lg whitespace-no-wrap text-center">
+                                        <td className="w-1/4 px-5 py-5  bg-white border-b border-gray-200">
+                                          <p className="text-gray-900 whitespace-no-wrap text-center">
                                           {elem.KEYSTAT_NAME}  
                                           </p>
                                         </td>
-                                        <td className="w-1/4 px-5 py-5 text-md bg-white border-b border-gray-200">
-                                          <p className="text-cyan-600 text-lg font-bold  whitespace-no-wrap text-center ">
+                                        <td className="w-1/4 px-5 py-5  bg-white border-b border-gray-200">
+                                          <p className="text-cyan-600 font-bold  whitespace-no-wrap text-center ">
                                           {elem.DATA_VALUE} <span className='text-gray-600 font-medium'>({elem.UNIT_NAME})</span>
                                           </p>
 
                                         </td>
-                                        <td className="w-1/4 px-5 py-5 text-md bg-white border-b border-gray-200">
-                                          <p className="text-gray-900 text-lg whitespace-no-wrap text-center">
+                                        <td className="w-1/4 px-5 py-5  bg-white border-b border-gray-200">
+                                          <p className="text-gray-900 whitespace-no-wrap text-center">
                                           {elem.CYCLE}  
                                           </p>
                                         </td>

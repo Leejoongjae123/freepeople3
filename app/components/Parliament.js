@@ -110,7 +110,7 @@ export default function Parliament() {
         </div>
       </div>
 
-      <div className="pt-10 grid gap-8 md:grid-cols-1 px-20">
+      <div className="pt-10 grid gap-8 md:grid-cols-1">
         <div className="">
           <div className="">
             <h1 className="mb-5 text-2xl font-bold text-center">국민의힘</h1>
@@ -118,29 +118,29 @@ export default function Parliament() {
               <div className="flex">
                 {/* <img className="opacity-10 absolute inset-0 w-full h-full object-contain z-0 backdrop-blur-md" src="https://freepeopleimage.s3.ap-northeast-2.amazonaws.com/gukhim-removebg-preview.png"></img> */}
                 <table className="table-fixed w-full text-sm text-left text-gray-500 ">
-                  <thead className="text-xs text-gray-700 uppercase bg-gray-50 ">
-                    <tr>
+                  <thead className="text-xs lg:text-lg text-gray-700 uppercase bg-gray-50 ">
+                    <tr className="flex-wrap">
                       <th
                         scope="col"
-                        className="text-center text-lg px-6 py-3 w-1/2"
+                        className="text-center py-3 w-1/2"
                       >
                         제목
                       </th>
                       <th
                         scope="col"
-                        className="text-center text-lg px-6 py-3 w-1/4"
+                        className="text-center py-3 w-1/4"
                       >
                         작성일
                       </th>
                       <th
                         scope="col"
-                        className="text-center text-lg px-6 py-3 w-1/2"
+                        className="text-center py-3 w-1/2"
                       >
                         제목
                       </th>
                       <th
                         scope="col"
-                        className="text-center text-lg px-6 py-3 w-1/4"
+                        className="text-center py-3 w-1/4"
                       >
                         작성일
                       </th>
@@ -149,13 +149,13 @@ export default function Parliament() {
                   <tbody>
                     {gukhimarticle.map((elem, index) => {
                       return (
-                        <tr key={index} className="bg-white border-b ">
+                        <tr key={index} className="bg-white border-b text-sm lg:text-lg ">
                           <td
                             scope="row"
-                            className="whitespace-normal px-6 py-4 font-medium text-gray-900 "
+                            className="whitespace-normal pl-4 lg:px-6 py-4 font-medium text-gray-900 "
                           >
                             <a target="_blank" href={elem[0].url}>
-                              <span className="text-lg font-bold line-clamp-2">
+                              <span className="font-bold line-clamp-6 lg:line-clamp-2 ">
                                 {elem[0]["title"]}
                               </span>
                             </a>
@@ -163,15 +163,15 @@ export default function Parliament() {
                               {elem[0]["category"]}
                             </span>
                           </td>
-                          <td className="text-center truncate w-1/4 px-6 py-4">
+                          <td className="text-center lg:truncate w-1/4 py-4">
                             {elem[0]["regiDate"]}
                           </td>
                           <td
                             scope="row"
-                            className="whitespace-normal px-6 py-4 font-medium text-gray-900 "
+                            className="whitespace-normal pl-4 lg:px-6 py-4 font-medium text-gray-900 "
                           >
                             <a target="_blank" href={elem[1].url}>
-                              <p className="text-lg font-bold line-clamp-2">
+                              <p className="font-bold line-clamp-6 lg:line-clamp-2">
                                 {elem[1]["title"]}
                               </p>
                             </a>
@@ -179,7 +179,7 @@ export default function Parliament() {
                               {elem[1]["category"]}
                             </span>
                           </td>
-                          <td className="text-center truncate w-1/4 px-6 py-4">
+                          <td className="text-center lg:truncate w-1/4 py-4">
                             {elem[1]["regiDate"]}
                           </td>
                         </tr>
@@ -214,29 +214,29 @@ export default function Parliament() {
             <div className="flex">
               {/* <img className="opacity-10 absolute inset-0 w-full h-full object-contain z-0 backdrop-blur-md" src="https://freepeopleimage.s3.ap-northeast-2.amazonaws.com/dubul-removebg-preview.png"></img> */}
               <table className="table-fixed w-full text-sm text-left text-gray-500">
-                <thead className="text-xs text-gray-700 uppercase bg-gray-50 ">
+                <thead className="text-xs lg:text-lg text-gray-700 uppercase bg-gray-50 ">
                   <tr>
                     <th
                       scope="col"
-                      className="text-lg text-center px-6 py-3 w-1/2"
+                      className="text-center py-3 w-1/2"
                     >
                       제목
                     </th>
                     <th
                       scope="col"
-                      className="text-lg text-center px-6 py-3 w-1/4"
+                      className="text-center py-3 w-1/4"
                     >
                       작성일
                     </th>
                     <th
                       scope="col"
-                      className="text-lg text-center px-6 py-3 w-1/2"
+                      className="text-center px-6 py-3 w-1/2"
                     >
                       제목
                     </th>
                     <th
                       scope="col"
-                      className="text-lg text-center px-6 py-3 w-1/4"
+                      className="text-center py-3 w-1/4"
                     >
                       작성일
                     </th>
@@ -245,37 +245,37 @@ export default function Parliament() {
                 <tbody>
                   {minjuarticle.map((elem, index) => {
                     return (
-                      <tr key={index} className="bg-white border-b ">
+                      <tr key={index} className="bg-white border-b text-sm lg:text-lg">
                         <td
                           scope="row"
-                          className="whitespace-normal px-6 py-4 font-medium text-gray-900"
+                          className="whitespace-normal pl-4 lg:px-6 py-4 font-medium text-gray-900 "
                         >
                           <a target="_blank" href={elem[0].url}>
-                            <p className="text-lg font-bold line-clamp-2">
+                            <span className="font-bold line-clamp-6 lg:line-clamp-2 ">
                               {elem[0]["title"]}
-                            </p>
-                            <span className="text-base text-cyan-600">
-                              {elem[0]["category"]}
                             </span>
                           </a>
+                          <span className="text-cyan-600">
+                            {elem[0]["category"]}
+                          </span>
                         </td>
-                        <td className="text-center truncate w-1/4 px-6 py-4">
+                        <td className="text-center lg:truncate w-1/4 py-4">
                           {elem[0]["regiDate"]}
                         </td>
                         <td
                           scope="row"
-                          className="whitespace-normal px-6 py-4 font-medium text-gray-900"
+                          className="whitespace-normal pl-4 lg:px-6 py-4 font-medium text-gray-900 "
                         >
                           <a target="_blank" href={elem[1].url}>
-                            <p className="text-lg font-bold line-clamp-2">
+                            <p className="font-bold line-clamp-6 lg:line-clamp-2">
                               {elem[1]["title"]}
                             </p>
                           </a>
-                          <span className="text-base text-cyan-600">
+                          <span className="text-cyan-600">
                             {elem[1]["category"]}
                           </span>
                         </td>
-                        <td className="text-center truncate w-1/4 px-6 py-4">
+                        <td className="text-center lg:truncate w-1/4 py-4">
                           {elem[1]["regiDate"]}
                         </td>
                       </tr>
@@ -304,33 +304,31 @@ export default function Parliament() {
           </h1>
           <div className="w-full relative overflow-x-auto shadow-md sm:rounded-lg bg-white">
             <div className="w-full">
-              {/* <img className="z-0 absolute inset-0 w-full h-full object-contain backdrop-blur-md" src="https://freepeopleimage.s3.ap-northeast-2.amazonaws.com/gukip-removebg-preview.png"></img> */}
-
               <div className="flex z-10">
-                <table className="table-auto table-fixed w-full text-sm text-left text-gray-500 ">
-                  <thead className="text-xs text-gray-700 uppercase bg-gray-50 ">
-                    <tr>
+                <table className="table-fixed w-full text-sm text-left text-gray-500 ">
+                  <thead className="text-gray-700 uppercase bg-gray-50 ">
+                    <tr className="text-xs lg:text-lg">
                       <th
                         scope="col"
-                        className="text-lg text-center  px-6 py-3 w-1/2"
+                        className="text-center py-3 w-1/2"
                       >
                         제목
                       </th>
                       <th
                         scope="col"
-                        className="text-lg text-center  px-6 py-3 w-1/4"
+                        className="text-center  py-3 w-1/4"
                       >
                         작성일
                       </th>
                       <th
                         scope="col"
-                        className="text-lg text-center  px-6 py-3 w-1/2"
+                        className="text-center  py-3 w-1/2"
                       >
                         제목
                       </th>
                       <th
                         scope="col"
-                        className="text-lg text-center  px-6 py-3 w-1/4"
+                        className="text-center  py-3 w-1/4"
                       >
                         작성일
                       </th>
@@ -339,50 +337,49 @@ export default function Parliament() {
                   <tbody>
                     {parliamentCreator.map((elem, index) => {
                       return (
-                        <tr key={index} className="bg-white border-b ">
+                        <tr key={index} className="bg-white border-b text-sm lg:text-lg">
                           <td
                             scope="row"
-                            className="whitespace-normal px-6 py-4 font-medium text-gray-900"
+                            className="whitespace-normal pl-2 lg:px-6 py-4 font-medium text-gray-900"
                           >
-                            <div className="flex">
-                              <p className="text-lg font-bold line-clamp-2">
+                            <div className="flex items-center">
+                              <p className="font-bold line-clamp-6 lg:line-clamp-2">
                                 <a target="_blank" href={elem[0].url}>
                                   {elem[0]["title"]}{" "}
                                 </a>
                               </p>
                               <a href={elem.downloadUrl}>
                                 <FcDocument size="30"></FcDocument>
-                                
                               </a>
                             </div>
 
-                            <span className="text-base text-cyan-600">
+                            <span className="text-cyan-600">
                               {elem[0]["writer"]}
                             </span>
                           </td>
-                          <td className="text-center truncate w-1/4 px-6 py-4">
+                          <td className="text-center lg:truncate w-1/4 py-4">
                             {elem[0]["regiDate"]}
                           </td>
                           <td
                             scope="row"
-                            className="whitespace-normal px-6 py-4 font-medium text-gray-900"
+                            className="whitespace-normal pl-2 lg:px-6 py-4 font-medium text-gray-900"
                           >
-                            <div className="flex">
-                            <p className="text-lg font-bold line-clamp-2">
-                              <a target="_blank" href={elem[1].url}>
-                                {elem[1]["title"]}
-                              </a>
-                            </p>
-                            <a href='https://www.naver.com'>
-                                {/* <FcDocument size="30"></FcDocument> */}
+                            <div className="flex items-center">
+                              <p className="font-bold line-clamp-6 lg:line-clamp-2">
+                                <a target="_blank" href={elem[1].url}>
+                                  {elem[1]["title"]}
+                                </a>
+                              </p>
+                              <a href="https://www.naver.com">
+                                <FcDocument size="30"></FcDocument>
                               </a>
                             </div>
 
-                            <span className="text-base text-cyan-600">
+                            <span className="text-cyan-600">
                               {elem[1]["writer"]}
                             </span>
                           </td>
-                          <td className="text-center truncate w-1/4 px-6 py-4">
+                          <td className="text-center lg:truncate w-1/4 py-4">
                             {elem[1]["regiDate"]}
                           </td>
                         </tr>
