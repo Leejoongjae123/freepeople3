@@ -337,26 +337,6 @@ export default function Parliament() {
                     </tr>
                   </thead>
                   <tbody>
-                    {/* {
-                        parliamentCreator.map((elem,index)=>{
-                          return (
-                          <tr key={index} className="bg-white border-b z-50 ">
-                            <td scope="row" className="truncate px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                <a className='z-50' target='_blank' href={elem[0].url}><p className='text-lg font-bold line-clamp-2'>{elem[0]['title']}</p><span className='text-base text-cyan-600'>{elem[0]['writer']}</span></a>
-                            </td>
-                            <td className="text-center truncate w-1/4 px-6 py-4">
-                                {elem[0]['regiDate']}
-                            </td>
-                            <td scope="row" className="truncate px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                <a className='z-50' target='_blank' href={elem[1].url}><p className='text-lg font-bold line-clamp-2'>{elem[1]['title']}</p><span className='text-base text-cyan-600'>{elem[1]['writer']}</span></a>
-                            </td>
-                            <td className="text-center truncate w-1/4 px-6 py-4">
-                                {elem[1]['regiDate']}
-                            </td>
-                        </tr>
-                          )
-                        })
-                      } */}
                     {parliamentCreator.map((elem, index) => {
                       return (
                         <tr key={index} className="bg-white border-b ">
@@ -364,14 +344,21 @@ export default function Parliament() {
                             scope="row"
                             className="whitespace-normal px-6 py-4 font-medium text-gray-900"
                           >
-                            <a target="_blank" href={elem[0].url}>
+                            <div className="flex">
                               <p className="text-lg font-bold line-clamp-2">
-                                {elem[0]["title"]}
+                                <a target="_blank" href={elem[0].url}>
+                                  {elem[0]["title"]}{" "}
+                                </a>
                               </p>
-                              <span className="text-base text-cyan-600">
-                                {elem[0]["writer"]}
-                              </span>
-                            </a>
+                              <a href={elem.downloadUrl}>
+                                <FcDocument size="30"></FcDocument>
+                                
+                              </a>
+                            </div>
+
+                            <span className="text-base text-cyan-600">
+                              {elem[0]["writer"]}
+                            </span>
                           </td>
                           <td className="text-center truncate w-1/4 px-6 py-4">
                             {elem[0]["regiDate"]}
@@ -380,11 +367,17 @@ export default function Parliament() {
                             scope="row"
                             className="whitespace-normal px-6 py-4 font-medium text-gray-900"
                           >
-                            <a target="_blank" href={elem[1].url}>
-                              <p className="text-lg font-bold line-clamp-2">
+                            <div className="flex">
+                            <p className="text-lg font-bold line-clamp-2">
+                              <a target="_blank" href={elem[1].url}>
                                 {elem[1]["title"]}
-                              </p>
-                            </a>
+                              </a>
+                            </p>
+                            <a href='https://www.naver.com'>
+                                {/* <FcDocument size="30"></FcDocument> */}
+                              </a>
+                            </div>
+
                             <span className="text-base text-cyan-600">
                               {elem[1]["writer"]}
                             </span>
