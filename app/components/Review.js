@@ -522,7 +522,7 @@ export default function Review() {
                         {columnData.map((elem, index) => (
                           <li
                             key={index * 111}
-                            className="w-full flex-1 pb-3 mx-auto sm:pb-4 border-b-2"
+                            className="w-full flex-1 mx-auto pb-3 sm:pb-4 border-b-2"
                           >
                             <div className="grid grid-cols-4 items-center ">
                               <div className="col-span-3">
