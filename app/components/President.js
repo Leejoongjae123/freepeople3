@@ -233,9 +233,8 @@ export default function President() {
         </div>
         <div className="text-xs lg:text-lg flex flex-col my-10 lg:px-0">
           <div className=" mt-4 grid gap-4 grid-cols-2 lg:grid-cols-6 px-18">
-            <div className="flex justify-center items-start rounded-xl bg-white p-4 shadow-lg">
+            <div className="flex justify-center items-center rounded-xl bg-white p-4 shadow-lg">
               <div className="flex h-12 w-12 items-center justify-center rounded-full border border-blue-100 bg-blue-50">
-                
                 <FcCurrencyExchange size='40'></FcCurrencyExchange>
               </div>
 
@@ -245,7 +244,7 @@ export default function President() {
               </div>
               
             </div>
-            <div className="flex justify-center items-start rounded-xl bg-white p-4 shadow-lg">
+            <div className="flex justify-center items-cemter rounded-xl bg-white p-4 shadow-lg">
               <div className="flex h-12 w-12 items-center justify-center rounded-full border border-blue-100 bg-blue-50">
                 {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
@@ -259,7 +258,7 @@ export default function President() {
               </div>
               
             </div>
-            <div className="flex justify-center items-start rounded-xl bg-white p-4 shadow-lg">
+            <div className="flex justify-center items-center rounded-xl bg-white p-4 shadow-lg">
               <div className="flex h-12 w-12 items-center justify-center rounded-full border border-blue-100 bg-blue-50">
                 <FcAreaChart size='40'></FcAreaChart>
               </div>
@@ -269,7 +268,7 @@ export default function President() {
               </div>
             </div>
 
-            <div className="flex justify-center items-start rounded-xl bg-white p-4 shadow-lg">
+            <div className="flex justify-center items-center rounded-xl bg-white p-4 shadow-lg">
               <div className="flex h-12 w-12 items-center justify-center rounded-full border border-indigo-100 bg-indigo-50">
                 <FcMoneyTransfer  size='40'></FcMoneyTransfer>
               </div>
@@ -279,24 +278,24 @@ export default function President() {
               </div>
             </div>
 
-            <div className="flex justify-center items-start rounded-xl bg-white p-4 shadow-lg">
+            <div className="flex justify-center items-center rounded-xl bg-white p-4 shadow-lg">
               <div className="flex h-12 w-12 items-center justify-center rounded-full border border-orange-100 bg-orange-50">
                 <GiBarrel size='40'></GiBarrel>
               </div>
               <div className="ml-4">
                 <h2 className="font-semibold">유가(두바이)</h2>
-                <p className="mt-2 text-lg font-bold text-cyan-600">{economyIndicators.oil} <span className='text-xs text-gray-500 font-normal'>(달러/배럴)</span></p>
+                <p className="mt-2 text-lg font-bold text-cyan-600">{economyIndicators.oil} <span className='text-xs line-clamp-1 text-gray-500 font-normal'>(달러/배럴)</span></p>
               </div>
             </div>
 
             
-            <div className="flex justify-center items-start rounded-xl bg-white p-4 shadow-lg">
+            <div className="flex justify-center items-center rounded-xl bg-white p-4 shadow-lg">
               <div className="flex h-12 w-12 items-center justify-center rounded-full border border-red-100 bg-red-50">
                 <AiFillGolden color='#FFd700' size='40'></AiFillGolden>
               </div>
               <div className="ml-4">
                 <h2 className="font-semibold">금 시세</h2>
-                <p className="mt-2 text-lg font-bold text-cyan-600">{economyIndicators.gold} <span className='text-xs text-gray-500 font-normal'>(달러/toz)</span></p>
+                <p className="mt-2 text-lg font-bold text-cyan-600">{economyIndicators.gold} <span className='text-xs line-clamp-1 text-gray-500 font-normal'>(달러/toz)</span></p>
               </div>
             </div>
 
