@@ -372,7 +372,7 @@ export default function Review() {
                             key={index * 111}
                             className="w-full pb-3 mx-auto sm:pb-4 border-b-2"
                           >
-                            <div className="grid grid-cols-4 items-center space-x-4">
+                            <div className="grid grid-cols-4 items-center ">
                               <div className="col-span-3">
                                 <button
                                   onClick={() => {
@@ -524,7 +524,7 @@ export default function Review() {
                             key={index * 111}
                             className="w-full flex-1 pb-3 mx-auto sm:pb-4 border-b-2"
                           >
-                            <div className="grid grid-cols-4 items-center space-x-4">
+                            <div className="grid grid-cols-4 items-center ">
                               <div className="col-span-3">
                                 <button
                                   onClick={() => {

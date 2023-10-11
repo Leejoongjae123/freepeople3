@@ -157,7 +157,7 @@ export default function President() {
                     <th scope="col" className="w-3/4  px-6 py-3 text-center">
                         제목
                     </th>
-                    <th scope="col" className="w-1/4px-6 py-3 text-center">
+                    <th scope="col" className="w-1/4 py-3 text-center">
                         게시일
                     </th>
                   </tr>
@@ -172,7 +172,7 @@ export default function President() {
                               <p className='font-bold whitespace-normal line-clamp-2 text-left text-gray-700'>{elem.subtitle}</p>
                               <p className='whitespace-normal line-clamp-2 text-left text-gray-500'>{elem.contents}</p>
                           </th>
-                          <td className="grid-col px-6 py-4 text-center">
+                          <td className="grid-col py-4 text-center">
                               {elem.regiDate}
                           </td>
                         </tr>
@@ -199,7 +199,7 @@ export default function President() {
                     <th scope="col" className="w-3/4 px-6 py-3 text-center">
                         제목
                     </th>
-                    <th scope="col" className="w-1/4 px-6 py-3 text-center">
+                    <th scope="col" className="w-1/4 py-3 text-center">
                         게시일
                     </th>
                   </tr>
