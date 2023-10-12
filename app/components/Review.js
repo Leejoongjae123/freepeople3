@@ -40,6 +40,7 @@ export default function Review() {
       try {
         const response = await axios.get(
           `https://mks5ux6whggik4anhr3c5ofdie0abvss.lambda-url.ap-northeast-2.on.aws/getBigKinds?page=${bigKindsNo}`
+          
         );
         setBigKindsData(response.data[0]);
         setBigKindsLoading(false);
@@ -57,7 +58,8 @@ export default function Review() {
       try {
         const response = await axios.get(
           `https://mks5ux6whggik4anhr3c5ofdie0abvss.lambda-url.ap-northeast-2.on.aws/getAllPostings?category=1&page=${futureNo}`
-          // `https://mks5ux6whggik4anhr3c5ofdie0abvss.lambda-url.ap-northeast-2.on.aws/getFuturePosting?page=${futureNo}`
+          
+          
         );
         setFutureData(response.data);
         setFutureLoading(false);
@@ -75,7 +77,7 @@ export default function Review() {
       try {
         const response = await axios.get(
           `https://mks5ux6whggik4anhr3c5ofdie0abvss.lambda-url.ap-northeast-2.on.aws/getAllPostings?category=2&page=${columnNo}`
-          // `https://mks5ux6whggik4anhr3c5ofdie0abvss.lambda-url.ap-northeast-2.on.aws/getColumnPosting?page=${columnNo}`
+          
         );
         setColumnData(response.data);
         setColumnLoading(false);

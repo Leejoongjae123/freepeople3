@@ -43,6 +43,7 @@ export default function President() {
   const fetchData2 = async () => {
     try {
       const response = await fetch(`https://mks5ux6whggik4anhr3c5ofdie0abvss.lambda-url.ap-northeast-2.on.aws/getPresidentNBS?page=1`);
+      
       const jsonData=await response.json();
       setPresidentNBS(jsonData);
       setPresidentNBSLoading(false);
@@ -54,6 +55,7 @@ export default function President() {
   const fetchData5 = async () => {
     try {
       const response = await axios.get(`https://mks5ux6whggik4anhr3c5ofdie0abvss.lambda-url.ap-northeast-2.on.aws/getEconomyStatus`);
+      
       setEconomyIndicators(response.data);
       setEconomyIndicatorsLoading(false);
       console.log("loading완료5")
@@ -61,58 +63,13 @@ export default function President() {
       console.error('Error fetching data:', error);
     }
   };
-  // const fetchData3 = async () => {
-  //   try {
-  //     const response = await fetch(`https://mks5ux6whggik4anhr3c5ofdie0abvss.lambda-url.ap-northeast-2.on.aws/getpresidentbrief?page=1`);
-  //     const jsonData= await response.json()
-  //     setPresidentbrief(jsonData);
-  //     setPresidentbriefLoading(false);
-  //     console.log("loading완료3")
-  //   } catch (error) {
-  //     console.error('Error fetching data:', error);
-  //   }
-  // };
-  // const fetchData4 = async () => {
-  //   try {
-  //     const response = await fetch(`https://mks5ux6whggik4anhr3c5ofdie0abvss.lambda-url.ap-northeast-2.on.aws/getpresidentpress?page=1`);
-  //     const jsonData=await response.json()
-  //     setPresidentpress(jsonData);
-  //     setPresidentpressLoading(false);
-  //     console.log("loading완료4")
-  //   } catch (error) {
-  //     console.error('Error fetching data:', error);
-  //   }
-  // };
-  // const fetchData5 = async () => {
-  //   try {
-  //     const response = await fetch(`https://mks5ux6whggik4anhr3c5ofdie0abvss.lambda-url.ap-northeast-2.on.aws/getEconomyStatus`);
-  //     const jsonData=await response.json()
-  //     setEconomyIndicators(jsonData);
-  //     setEconomyIndicatorsLoading(false);
-  //     console.log("loading완료5")
-  //   } catch (error) {
-  //     console.error('Error fetching data:', error);
-  //   }
-  // };
-  // const fetchData1 = async () => {
-  //   try {
-  //     const response = await axios.get(`https://mks5ux6whggik4anhr3c5ofdie0abvss.lambda-url.ap-northeast-2.on.aws/getpresidentbrief?page=1`);
-  //     setPresidentbrief(response.data);
-  //     setPresidentbriefLoading(false);
-  //     console.log("loading완료3")
-  //   } catch (error) {
-  //     console.error('Error fetching data:', error);
-  //   }
-  // };
+
 
 
   useEffect(() => {
-    // 데이터를 가져오는 함수를 정의합니다.
-    
+    // 데이터를 가져오는 함수를 정의합니다.    
     fetchData1(); // 함수를 호출하여 데이터를 가져옵니다.
     fetchData2(); // 함수를 호출하여 데이터를 가져옵니다.
-    // fetchData3(); // 함수를 호출하여 데이터를 가져옵니다.
-    // fetchData4(); // 함수를 호출하여 데이터를 가져옵니다.
     fetchData5(); // 함수를 호출하여 데이터를 가져옵니다.
   }, []);
 
