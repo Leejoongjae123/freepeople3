@@ -3,6 +3,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import ArticleModal from "./ArticleModal";
+import SearchModal from "./SearchModal";
 
 export default function SearchCard1() {
   const [select1Value, setSelect1Value] = useState("제20대 대통령선거");
@@ -259,10 +260,10 @@ export default function SearchCard1() {
           </div>
         </div>
         {showModal && (
-          <ArticleModal
+          <SearchModal
             modalText={modalText}
             closeModal={closeModal}
-          ></ArticleModal>
+          ></SearchModal>
         )}
       </div>
     </div>
