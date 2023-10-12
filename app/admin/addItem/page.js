@@ -95,7 +95,7 @@ export default function AddTopic() {
       };
     }
 
-    let changedContents=postInfo.contents.replaceAll('td style="',`td style="border:1px solid black;`).replaceAll("<td>",'<td style="border:1px solid black;>')
+    let changedContents=postInfo.contents.replaceAll('td style="',`td style="border:1px solid gray;`).replaceAll("<td>",'<td style="border:1px solid gray;>')
     postInfo.contents=changedContents
     
 
