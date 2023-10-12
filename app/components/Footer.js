@@ -19,7 +19,7 @@ export default function Footer() {
   let isBase = pathname === "/";
   console.log("isbase:", isBase);
 
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
 
   const closeModal = () => {
     setShowModal(false);
