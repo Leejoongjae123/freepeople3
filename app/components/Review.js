@@ -182,7 +182,7 @@ export default function Review() {
             </div>
             <div className="">
               <p className="mt-2 pb-5 text-lg leading-8 text-gray-600 border-b border-gray-200">
-                미래민중 논평 및 컬럼
+                현안분석 및 논평
               </p>
             </div>
           </div>
@@ -200,7 +200,7 @@ export default function Review() {
                   </h1>
                   <div className="min-h-fit bg-white border border-gray-200 rounded-lg shadow">
                     <div className="p-5 grid grid-cols-5 items-center gap-x-5">
-                      <div className="relative col-span-1 h-56 flex justify-center">
+                      <div className="relative col-span-2 h-56 flex justify-center">
                         {bigKindsData ? (
                           <Image
                             className="object-contain"
@@ -213,7 +213,7 @@ export default function Review() {
                         )}
                       </div>
                       {bigKindsData ? (
-                        <div className="col-span-4 ">
+                        <div className="col-span-3">
                           <button
                             onClick={() => {
                               handleButtonClick(
@@ -516,7 +516,7 @@ export default function Review() {
               ) : (
                 <>
                   <h1 className="text-2xl font-bold text-center my-5">
-                    칼럼 연구
+                    컬럼 연구
                   </h1>
                   <div className="flex flex-col p-5 bg-white border border-gray-200 rounded-lg shadow ">
                     <div className="flex flex-col justify-center h-full">

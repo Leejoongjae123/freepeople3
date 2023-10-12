@@ -86,7 +86,7 @@ export default function President() {
         </div>
         <div>
             <p className="mt-2 text-lg leading-8 text-gray-600">
-            행정부처 관련 자료
+            여론조사 및 브리핑
             </p>
         </div>   
       </div>

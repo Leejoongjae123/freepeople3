@@ -888,7 +888,7 @@ export default function SearchCard1() {
                             <div className="flex-shrink-0"></div>
                             <div className="">
                               <p className="font-bold text-center whitespace-pre-wrap text-gray-900 whitespace-no-wrap">
-                                {elem[2]}
+                                {numberWithCommas(elem[2])}
                               </p>
                             </div>
                           </div>
@@ -914,10 +914,10 @@ export default function SearchCard1() {
             </div>
             <div className="font-bold text-right text-gray-600">
               ※ 선거인수:
-              {electionResult && <span>{electionResult["totalCount"]}</span>},
+              {electionResult && <span>{numberWithCommas(electionResult["totalCount"])}</span>} / 
               유효투표수:
               {electionResult && (
-                <span>{electionResult["effectiveCount"]}</span>
+                <span>{numberWithCommas(electionResult["effectiveCount"])}</span>
               )}
             </div>
           </div>
@@ -931,4 +931,14 @@ export default function SearchCard1() {
       </div>
     </div>
   );
+}
+
+function numberWithCommas(number) {
+  // 숫자를 문자열로 변환합니다.
+  let numberString = number?.toString();
+  
+  // 정규 표현식을 사용하여 천 단위 쉼표를 추가합니다.
+  numberString = numberString?.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  
+  return numberString;
 }

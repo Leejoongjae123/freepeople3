@@ -113,7 +113,7 @@ export default function Statistics() {
                                         카테고리
                                     </th>
                                     <th scope="col" className="px-5 py-3 font-bold text-center text-gray-800 uppercase bg-white border-b border-gray-200">
-                                        이름
+                                        항목
                                     </th>
                                     <th scope="col" className="px-5 py-3 font-bold text-center text-gray-800 uppercase bg-white border-b border-gray-200">
                                         값

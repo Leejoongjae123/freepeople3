@@ -30,7 +30,7 @@ export default function Footer() {
                   </span>
                 </a>
               </div>
-              <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+              <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-2">
                 <div>
                   <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                     INTRODUCTION
@@ -50,12 +50,12 @@ export default function Footer() {
                     CONTACT US
                   </h2>
                   <ul className="flex flex-col text-gray-500 dark:text-gray-400 font-medium">
-                    <li className="h-10">제휴협력 및 연구용역의뢰</li>
+                    <li className="h-10">jeongfran@gmail.com</li>
 
                     <li className="h-10">wsfran@naver.com</li>
                   </ul>
                 </div>
-                <div>
+                {/* <div>
                   <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                     INFORMATION
                   </h2>
@@ -66,7 +66,7 @@ export default function Footer() {
                     <li className="h-10">발행인 : 정우식</li>
                     <li className="h-10">편집인 : 정우식</li>
                   </ul>
-                </div>
+                </div> */}
               </div>
             </div>
             <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
