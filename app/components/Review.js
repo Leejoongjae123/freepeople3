@@ -158,9 +158,6 @@ export default function Review() {
   };
 
   const handleButtonClick = (title, contents, imageUrl) => {
-    console.log(title);
-    console.log(contents);
-    console.log(imageUrl);
     setModalText([title, contents, imageUrl]);
     toggleModal();
   };

@@ -6,9 +6,11 @@ import ArticleModal from "./ArticleModal";
 import AppModal from "./ReactModal";
 import FooterModal from "./FooterModal";
 import ServiceModal from "./ServiceModal";
+import PrivacyModal from "./PrivacyModal";
 import { getServerSession } from "next-auth";
 // import { authOptions } from '../../api/auth/[...nextauth]/route''
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 export default function Footer() {
   // let session=await getServerSession(authOptions)
@@ -16,6 +18,16 @@ export default function Footer() {
   console.log("usePathname:", pathname);
   let isBase = pathname === "/";
   console.log("isbase:", isBase);
+
+  const [showModal, setShowModal] = useState(true);
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
 
   return (
     <div>
@@ -42,7 +54,9 @@ export default function Footer() {
                     <li className="h-10">
                       <ServiceModal></ServiceModal>
                     </li>
-                    <li className="h-10">개인정보처리 방침</li>
+                    <li className="h-10">
+                      <button onClick={toggleModal}>개인정보처리방침</button>
+                    </li>
                   </ul>
                 </div>
                 <div>
@@ -74,12 +88,16 @@ export default function Footer() {
               <span className="text-sm text-gray-500 sm:text-center">
                 © 2023 재인융합경제연구소 All Rights Reserved.
               </span>
-              <div><a className="text-xs text-gray-500 underline" href="/admin/list">관리자 사이트로 이동</a></div>
-              
+              <div>
+                <a
+                  className="text-xs text-gray-500 underline"
+                  href="/admin/list"
+                >
+                  관리자 사이트로 이동
+                </a>
+              </div>
             </div>
-            
           </div>
-          
         </footer>
 
         //     <div>
@@ -106,6 +124,7 @@ export default function Footer() {
         //   </footer>
         // </div>
       )}
+      {showModal && <PrivacyModal closeModal={closeModal}></PrivacyModal>}
     </div>
   );
 }
