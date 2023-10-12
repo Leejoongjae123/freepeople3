@@ -19,7 +19,7 @@ export default async function page() {
     <div className="flex">
       <div className="w-64"></div>
       <div className="flex-1 bg-white">
-        {session.user.name === "이중재" || session.user.name==="정우식" ? (
+        {session.user.name === "이중재" || session.user.name==="Fran Jeong" ? (
           <div>
             <TopicsList></TopicsList>
             <nav aria-label="Page navigation example">
