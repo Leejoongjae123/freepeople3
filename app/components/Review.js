@@ -199,8 +199,8 @@ export default function Review() {
                     정치경제현안분석
                   </h1>
                   <div className="min-h-fit bg-white border border-gray-200 rounded-lg shadow">
-                    <div className="p-5 grid grid-cols-3 items-center gap-x-5">
-                      <div className="relative col-span-1 h-48 flex justify-center">
+                    <div className="p-5 grid grid-cols-5 items-center gap-x-5">
+                      <div className="relative col-span-1 h-56 flex justify-center">
                         {bigKindsData ? (
                           <Image
                             className="object-contain"
@@ -213,7 +213,7 @@ export default function Review() {
                         )}
                       </div>
                       {bigKindsData ? (
-                        <div className="col-span-2 ">
+                        <div className="col-span-4 ">
                           <button
                             onClick={() => {
                               handleButtonClick(
