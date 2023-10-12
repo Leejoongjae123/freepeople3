@@ -15,10 +15,11 @@ export default async function page() {
   console.log("session:", session);
 
   return (
+    
     <div className="flex">
       <div className="w-64"></div>
       <div className="flex-1 bg-white">
-        {session.user.name === "이중재" ? (
+        {session.user.name === "이중재" || session.user.name==="정우식" ? (
           <div>
             <TopicsList></TopicsList>
             <nav aria-label="Page navigation example">
