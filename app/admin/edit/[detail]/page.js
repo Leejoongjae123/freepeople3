@@ -30,7 +30,7 @@ export default function EditTopic(props) {
       });
       setTitle(response.data.title);
       setContents(response.data.contents);
-      console.log("loading완료")
+      // console.log("loading완료")
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -67,14 +67,14 @@ export default function EditTopic(props) {
           }
         }
       );
-      console.log("loading완료")
+      // console.log("loading완료")
     } catch (error) {
       console.error('Error fetching data:', error);
     }
   };
 
   const handleButtonClick = () => {
-    console.log('수정 버튼이 클릭되었습니다.');
+    // console.log('수정 버튼이 클릭되었습니다.');
     updateArticle()
     router.push('/admin/list')
   };
@@ -218,7 +218,7 @@ setContents(e.target.value);
             </div>
           </div>
         </div>  
-        {contents}
+        {/* {contents} */}
 
         <div className="my-10 flex items-center justify-end gap-x-6 mx-10">
 

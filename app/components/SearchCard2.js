@@ -55,7 +55,7 @@ export default function SearchCard1() {
     setCount(count + 1);
   };
 
-  console.log(select1Value, select2Value, select3Value, select4Value);
+  // console.log(select1Value, select2Value, select3Value, select4Value);
 
   const fetchData = async () => {
     try {
@@ -65,12 +65,12 @@ export default function SearchCard1() {
 
       setElectionResult(response.data);
       setElectionResultLoading(false);
-      console.log("loading완료개표결과");
-      console.log("electionResult:", electionResult);
+      // console.log("loading완료개표결과");
+      // console.log("electionResult:", electionResult);
     } catch (error) {
       setElectionResult({ result: [] });
       setElectionResultLoading(false);
-      console.log("loading실패개표결과");
+      // console.log("loading실패개표결과");
     }
   };
 

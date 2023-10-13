@@ -2,7 +2,7 @@ import React from "react";
 
 export default function SearchModal({ modalText, closeModal }) {
   let isImage = modalText[2].length;
-  console.log("length:", isImage);
+  // console.log("length:", isImage);
 
   return (
     <>

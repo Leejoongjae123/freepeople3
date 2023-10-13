@@ -187,12 +187,12 @@ export default function AddTopic() {
                             method: "POST",
                             body: formData,
                           });
-                          console.log(업로드결과);
+                          // console.log(업로드결과);
 
                           if (업로드결과.ok) {
                             setSrc(업로드결과.url + "/" + filename);
                           } else {
-                            console.log("실패");
+                            // console.log("실패");
                           }
                         }}
                       />

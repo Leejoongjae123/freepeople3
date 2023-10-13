@@ -38,7 +38,7 @@ export default function Parliament() {
 
         setGukhimarticle(groupedArticles);
         setGukhimarticleLoading(false);
-        console.log("loading완료3");
+        // console.log("loading완료3");
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -61,7 +61,7 @@ export default function Parliament() {
 
         setMinjuarticle(groupedArticles);
         setMinjuarticleLoading(false);
-        console.log("loading완료4");
+        // console.log("loading완료4");
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -83,7 +83,7 @@ export default function Parliament() {
         }
         setParliamentCreator(groupedArticles);
         setParliamentCreatorLoading(false);
-        console.log("loading완료5");
+        // console.log("loading완료5");
       } catch (error) {
         console.error("Error fetching data:", error);
       }

@@ -20,7 +20,7 @@ export default function PresidentSlider() {
         const response = await axios.get(`https://mks5ux6whggik4anhr3c5ofdie0abvss.lambda-url.ap-northeast-2.on.aws/getPresidentRealmeter?page=1`);
         setPresidentRealmeter(response.data);
         setPresidentRealmeterLoading(false);
-        console.log("loading리얼미터")
+        // console.log("loading리얼미터")
       } catch (error) {
         console.error('Error fetching data:', error);
       }

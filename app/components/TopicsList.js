@@ -25,7 +25,7 @@ export default function TopicsList() {
       const response = await axios.get(`https://mks5ux6whggik4anhr3c5ofdie0abvss.lambda-url.ap-northeast-2.on.aws/getAllPostings?category=${categoryIndex}&page=${no}`);
       setPostingData(response.data);
       setIsloading(false);
-      console.log("loading완료")
+      // console.log("loading완료")
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -51,7 +51,7 @@ export default function TopicsList() {
     setNo(number);
   };
   
-  console.log('inputStates:',inputStates)
+  // console.log('inputStates:',inputStates)
 
 
   const deleteData=async (topic,title)=>{
@@ -65,13 +65,13 @@ export default function TopicsList() {
           'accept': 'application/json'
         }
       });
-      console.log("삭제완료")
+      // console.log("삭제완료")
       fetchData()
     } catch (error) {
       console.error('Error fetching data:', error);
     }
   }
-  console.log("postingData:",postingData)
+  // console.log("postingData:",postingData)
 
   const handleDelete = (event,title) => {
     event.preventDefault(); // 기본 링크 동작 방지
@@ -87,7 +87,7 @@ export default function TopicsList() {
     deleteData(topic,title)
     
 
-    console.log("topic:",topic,'title:',title)
+    // console.log("topic:",topic,'title:',title)
   };
 
 

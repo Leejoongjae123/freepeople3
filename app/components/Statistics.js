@@ -23,8 +23,8 @@ export default function Statistics() {
           const response = await axios.get(`https://mks5ux6whggik4anhr3c5ofdie0abvss.lambda-url.ap-northeast-2.on.aws/getKoreaBank?page=${koreaBankNo}&keyword=${keyword}&category=${category}`);
           setKoreaBank(response.data.data);
           setKoreaBankLoading(false);
-          console.log("loading완료66666")
-          console.log(response.data)
+          // console.log("loading완료66666")
+          // console.log(response.data)
       } catch (error) {
           console.error('Error fetching data:', error);
       }
@@ -38,9 +38,9 @@ export default function Statistics() {
         event.preventDefault(); // 기본 링크 동작 방지
         setKoreaBankNo(number);
       };
-    console.log(keyword)
+    // console.log(keyword)
     
-    console.log('koreaBank:',koreaBank)
+    // console.log('koreaBank:',koreaBank)
     const handleNextClick1 = () => {
     const updatedList = koreaBankNoList.map(number => number + 5);
     if (koreaBankNoList[4]!=10){
@@ -56,7 +56,7 @@ export default function Statistics() {
           setKoreaBankNoList(updatedList)
           setKoreaBankNo(updatedList[0])
         }else{
-          console.log('error')
+          // console.log('error')
         }
       };
     
@@ -77,7 +77,7 @@ export default function Statistics() {
       // select1에서 A를 선택하면 select2를 초기화
     };
 
-    console.log('category:',category)
+    // console.log('category:',category)
     return (
 
     <div className="w-full mx-auto">

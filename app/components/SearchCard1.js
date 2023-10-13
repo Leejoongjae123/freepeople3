@@ -48,7 +48,7 @@ export default function SearchCard1() {
   };
 
   if (select1Value.length >= 1 && select2Value.length >= 1) {
-    console.log(select1Value, select2Value);
+    // console.log(select1Value, select2Value);
   }
 
   const fetchData = async () => {
@@ -58,7 +58,7 @@ export default function SearchCard1() {
       );
       setPartyData(response.data);
       setPartyDataLoading(false);
-      console.log("loading완료정당");
+      // console.log("loading완료정당");
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -83,9 +83,9 @@ export default function SearchCard1() {
   };
 
   const handleButtonClick = (title, contents, imageUrl) => {
-    console.log(title);
-    console.log(contents);
-    console.log(imageUrl);
+    // console.log(title);
+    // console.log(contents);
+    // console.log(imageUrl);
     setModalText([title, contents, imageUrl]);
     toggleModal();
   };

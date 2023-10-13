@@ -23,7 +23,7 @@ export default function SliderKOSIS() {
         );
         setKOSIS(response.data);
         setKOSISLoading(false);
-        console.log("loadingKOSIS");
+        // console.log("loadingKOSIS");
       } catch (error) {
         console.error("Error fetching data:", error);
       }

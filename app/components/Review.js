@@ -33,7 +33,7 @@ export default function Review() {
   const [modalTitle, setModalTitle] = useState("");
   const [modalText, setModalText] = useState(["", "", ""]);
 
-  console.log("bigKindsData:", bigKindsData);
+  // console.log("bigKindsData:", bigKindsData);
   useEffect(() => {
     // 데이터를 가져오는 함수를 정의합니다.
     const fetchData = async () => {
@@ -44,7 +44,7 @@ export default function Review() {
         );
         setBigKindsData(response.data[0]);
         setBigKindsLoading(false);
-        console.log("loading완료");
+        // console.log("loading완료");
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -63,7 +63,7 @@ export default function Review() {
         );
         setFutureData(response.data);
         setFutureLoading(false);
-        console.log("loading완료");
+        // console.log("loading완료");
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -81,7 +81,7 @@ export default function Review() {
         );
         setColumnData(response.data);
         setColumnLoading(false);
-        console.log("loading완료");
+        // console.log("loading완료");
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -126,7 +126,7 @@ export default function Review() {
       setBigKindsNoList(updatedList);
       setBigKindsNo(updatedList[0]);
     } else {
-      console.log("error");
+      // console.log("error");
     }
   };
   const handlePreviousClick2 = () => {
@@ -135,7 +135,7 @@ export default function Review() {
       setFutureNoList(updatedList);
       setFutureNo(updatedList[0]);
     } else {
-      console.log("error");
+      // console.log("error");
     }
   };
   const handlePreviousClick3 = () => {
@@ -144,7 +144,7 @@ export default function Review() {
       setColumnNoList(updatedList);
       setColumnNo(updatedList[0]);
     } else {
-      console.log("error");
+      // console.log("error");
     }
   };
 
@@ -162,7 +162,7 @@ export default function Review() {
     toggleModal();
   };
 
-  console.log("modaltitle:", modalTitle);
+  // console.log("modaltitle:", modalTitle);
 
   return (
     <>

@@ -29,7 +29,7 @@ export default function Policy() {
         );
         setKdipolicy(response.data);
         setKdipolicyLoading(false);
-        console.log("loading완료1");
+        // console.log("loading완료1");
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -41,7 +41,7 @@ export default function Policy() {
         );
         setKdistatus(response.data);
         setKdistatusLoading(false);
-        console.log("loading완료2");
+        // console.log("loading완료2");
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -53,7 +53,7 @@ export default function Policy() {
         );
         setYyd(response.data);
         setYydLoading(false);
-        console.log("loading완료3");
+        // console.log("loading완료3");
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -66,7 +66,7 @@ export default function Policy() {
         );
         setMinju(response.data);
         setMinjuLoading(false);
-        console.log("loading완료4");
+        // console.log("loading완료4");
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -78,7 +78,7 @@ export default function Policy() {
     fetchData4(); // 함수를 호출하여 데이터를 가져옵니다.
   }, []);
 
-  console.log("kdistatus:", kdistatus);
+  // console.log("kdistatus:", kdistatus);
 
   return (
     <div className="text-xs lg:text-lg">

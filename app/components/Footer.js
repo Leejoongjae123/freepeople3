@@ -15,9 +15,9 @@ import { useState } from "react";
 export default function Footer() {
   // let session=await getServerSession(authOptions)
   const pathname = usePathname();
-  console.log("usePathname:", pathname);
+  // console.log("usePathname:", pathname);
   let isBase = pathname === "/";
-  console.log("isbase:", isBase);
+  // console.log("isbase:", isBase);
 
   const [showModal, setShowModal] = useState(false);
 

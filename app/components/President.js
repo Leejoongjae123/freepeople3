@@ -34,7 +34,7 @@ export default function President() {
       
       setPresidentbrief(response.data);
       setPresidentbriefLoading(false);
-      console.log("loading완료1")
+      // console.log("loading완료1")
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -47,7 +47,7 @@ export default function President() {
       const jsonData=await response.json();
       setPresidentNBS(jsonData);
       setPresidentNBSLoading(false);
-      console.log("loading완료2")
+      // console.log("loading완료2")
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -58,7 +58,7 @@ export default function President() {
       
       setEconomyIndicators(response.data);
       setEconomyIndicatorsLoading(false);
-      console.log("loading완료5")
+      // console.log("loading완료5")
     } catch (error) {
       console.error('Error fetching data:', error);
     }
