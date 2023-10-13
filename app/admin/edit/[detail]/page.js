@@ -123,7 +123,7 @@ setContents(e.target.value);
                 </div>
               </div>
 
-              <div className="col-span-full">
+              {/* <div className="col-span-full">
                 <div className="sm:col-span-3">
                   <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">
                       이미지 파일
@@ -146,7 +146,7 @@ setContents(e.target.value);
                   </div>
 
                 </div>
-              </div>
+              </div> */}
 
               <div className="col-span-full">
                 <label htmlFor="about" className="block text-sm font-medium leading-6 text-gray-900">
