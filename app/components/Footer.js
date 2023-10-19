@@ -11,6 +11,8 @@ import { getServerSession } from "next-auth";
 // import { authOptions } from '../../api/auth/[...nextauth]/route''
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import ServiceModal2 from './ServiceModal2'
+import WhatisModal from './WhatIsModal'
 
 export default function Footer() {
   // let session=await getServerSession(authOptions)
@@ -18,15 +20,33 @@ export default function Footer() {
   // console.log("usePathname:", pathname);
   let isBase = pathname === "/";
   // console.log("isbase:", isBase);
+  const [showModal1, setShowModal1] = useState(false);
+  const [showModal2, setShowModal2] = useState(false);
+  const [showModal3, setShowModal3] = useState(false);
 
-  const [showModal, setShowModal] = useState(false);
 
-  const closeModal = () => {
-    setShowModal(false);
+  const closeModal3 = () => {
+    setShowModal3(false);
   };
 
-  const toggleModal = () => {
-    setShowModal(!showModal);
+  const toggleModal3 = () => {
+    setShowModal3(!showModal3);
+  };
+
+  const closeModal2 = () => {
+    setShowModal2(false);
+  };
+
+  const toggleModal2 = () => {
+    setShowModal2(!showModal2);
+  };
+
+  const closeModal1 = () => {
+    setShowModal1(false);
+  };
+
+  const toggleModal1 = () => {
+    setShowModal1(!showModal1);
   };
 
   return (
@@ -49,13 +69,14 @@ export default function Footer() {
                   </h2>
                   <ul className="text-gray-500 dark:text-gray-400 font-medium">
                     <li className="h-10">
-                      <FooterModal></FooterModal>
+                    <button onClick={toggleModal1}>미래 민중은</button>
+                      {/* <FooterModal></FooterModal> */}
                     </li>
                     <li className="h-10">
-                      <ServiceModal></ServiceModal>
+                      <button onClick={toggleModal2}>서비스 범위</button>
                     </li>
                     <li className="h-10">
-                      <button onClick={toggleModal}>개인정보처리방침</button>
+                      <button onClick={toggleModal3}>개인정보처리방침</button>
                     </li>
                   </ul>
                 </div>
@@ -69,18 +90,6 @@ export default function Footer() {
                     <li className="h-10">wsfran@naver.com</li>
                   </ul>
                 </div>
-                {/* <div>
-                  <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                    INFORMATION
-                  </h2>
-                  <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                    <li className="h-10">등록번호 : XXX-XXX-XXXX</li>
-                    <li className="h-10">등록일자 : 2023-10-11</li>
-                    <li className="h-10">발행일 : 2023-10-11</li>
-                    <li className="h-10">발행인 : 정우식</li>
-                    <li className="h-10">편집인 : 정우식</li>
-                  </ul>
-                </div> */}
               </div>
             </div>
             <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
@@ -99,32 +108,10 @@ export default function Footer() {
             </div>
           </div>
         </footer>
-
-        //     <div>
-
-        //     <footer className="bg-gray-500 dark:bg-gray-900">
-        //       <div className="px-20">
-        //         <div className="gap-8 px-4 py-6">
-        //               <div className="flex-1 w-full flex ">
-        //                   <div><FooterModal></FooterModal></div>
-        //                   <div><ServiceModal></ServiceModal></div>
-        //           </div>
-
-        //       </div>
-
-        //       </div>
-        //       <button
-        //                       type="submit"
-        //                       className="flex justify-center rounded-md bg-gray-200 px-3 py-1.5 text-sm font-semibold leading-6 text-black shadow-sm hover:bg-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-        //                       >
-        //                     <a href='/admin/list'>
-        //                     관리자 사이트로 이동
-        //                     </a>
-        //                     </button>
-        //   </footer>
-        // </div>
       )}
-      {showModal && <PrivacyModal closeModal={closeModal}></PrivacyModal>}
+      {showModal1 && <WhatisModal closeModal={closeModal1}></WhatisModal>}
+      {showModal2 && <ServiceModal2 closeModal={closeModal2}></ServiceModal2>}
+      {showModal3 && <PrivacyModal closeModal={closeModal3}></PrivacyModal>}
     </div>
   );
 }

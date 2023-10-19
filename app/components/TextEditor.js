@@ -16,13 +16,7 @@ export default function TextEditor({initialContent,inputContents,setInputContent
 
   },[])
 
-  const placeholder='Hello'
-  
-  
-
-
-
-  
+  const placeholder='Hello'  
   
   return (
     <div>

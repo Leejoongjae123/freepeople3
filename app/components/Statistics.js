@@ -93,7 +93,7 @@ export default function Statistics() {
                     <select value={select1Value} onChange={handleSelect1Change} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                       <option value="">-- 선택 --</option>
                       <option value="카테고리">카테고리</option>
-                      <option value="이름">이름</option>
+                      <option value="항목">항목</option>
                     </select>
                     <div className="my-5 md:my-0">
                       <input type="text" value={keyword} onChange={handleInputChange} className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:border-transparent" placeholder="검색어"/>

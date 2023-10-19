@@ -50,20 +50,7 @@ export default function AddTopic() {
       url =
         "https://mks5ux6whggik4anhr3c5ofdie0abvss.lambda-url.ap-northeast-2.on.aws//addColumnPosting";
     }
-    
-    // if (inputContents.includes("td style=")) {
-    //   let result = inputContents.replaceAll(
-    //     'td style="',
-    //     `td style="border:1px solid black;`
-    //   );
-    //   setInputContents(result); 
-    // } else if (inputContents.includes("<td>")){
-    //   let result = inputContents.replaceAll(
-    //     '<td>',
-    //     `<td style="border:1px solid black;>`
-    //   );
-    //   setInputContents(result); 
-    // }
+  
 
     let postInfo = {};
 

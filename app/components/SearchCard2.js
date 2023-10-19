@@ -117,6 +117,26 @@ export default function SearchCard1() {
     "경상남도",
     "제주특별자치도",
   ];
+  
+  const region1_1 = [
+    "서울특별시",
+    "부산광역시",
+    "대구광역시",
+    "인천광역시",
+    "광주광역시",
+    "대전광역시",
+    "울산광역시",
+    "세종특별자치시",
+    "경기도",
+    "강원도",
+    "충청북도",
+    "충청남도",
+    "전라북도",
+    "전라남도",
+    "경상북도",
+    "경상남도",
+    "제주특별자치도",
+  ];
   const region2 = {
     합계: [
       "합계"],
@@ -773,7 +793,24 @@ export default function SearchCard1() {
                   )}
                 </>
               }
-              {
+              {select1Value=="대선"?(
+                <>
+                <select
+                  value={select3Value}
+                  onChange={handleSelect3Change}
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                >
+                  <option value="">-- 선택 --</option>
+                  {region1.map((elem, index) => {
+                    return (
+                      <option key={index} value={elem}>
+                        {elem}
+                      </option>
+                    );
+                  })}
+                </select>
+              </>
+              ):(
                 <>
                   <select
                     value={select3Value}
@@ -781,7 +818,7 @@ export default function SearchCard1() {
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   >
                     <option value="">-- 선택 --</option>
-                    {region1.map((elem, index) => {
+                    {region1_1.map((elem, index) => {
                       return (
                         <option key={index} value={elem}>
                           {elem}
@@ -790,6 +827,8 @@ export default function SearchCard1() {
                     })}
                   </select>
                 </>
+              )
+
               }
               {select1Value != "지선" && (
                 <>
