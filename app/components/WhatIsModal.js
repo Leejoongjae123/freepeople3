@@ -14,7 +14,7 @@ export default function PrivacyModal({ modalText, closeModal }) {
         aria-hidden="true"
         className="inset-0 fixed flex items-center justify-center z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full backdrop-blur-md"
       >
-        <div className="relative max-w-screen-md max-h-full">
+        <div className="relative max-w-screen-md max-h-full ">
           <div className="relative bg-white rounded-lg shadow ">
             <div className="flex items-start justify-between p-4 border-b rounded-t ">
               <h3 className="text-xl font-semibold text-gray-900 ">
@@ -46,7 +46,7 @@ export default function PrivacyModal({ modalText, closeModal }) {
 
             <div className="flex-1 p-6 space-y-6 ">
               <div>
-                <p className="whitespace-pre-wrap text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                <p className="whitespace-pre-wrap text-base leading-relaxed text-black dark:text-gray-400">
                   <span className="text-lg font-bold">
                     ■ 민중의 대한민국 정치 신뢰를 회복시킵니다.
                   </span>{" "}

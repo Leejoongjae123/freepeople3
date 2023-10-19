@@ -46,7 +46,7 @@ export default function PrivacyModal({ modalText, closeModal }) {
 
             <div className="flex-1 p-6 space-y-6 ">
               <div>
-                <p className="whitespace-pre-wrap text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                <p className="whitespace-pre-wrap text-base leading-relaxed text-black dark:text-gray-400">
                   <span className="text-lg font-bold">■ 정보.분석</span>
                   <br />
                   -빅데이터 분석 : 언론진흥재단 빅카인즈를 활용한 주간단위

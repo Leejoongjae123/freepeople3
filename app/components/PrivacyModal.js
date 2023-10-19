@@ -49,7 +49,7 @@ export default function PrivacyModal({ modalText, closeModal }) {
 
             <div className="flex-1 p-6 space-y-6 ">
             <div>
-                <p>1. 개인정보의 처리 목적</p>
+                <p className="font-bold">1. 개인정보의 처리 목적</p>
                 <p>
                   &lt;미래민중&gt;(‘
                   <a href="http://www.peoplehub.co.kr/" target="_self">
@@ -63,7 +63,8 @@ export default function PrivacyModal({ modalText, closeModal }) {
                   식별.인증, 회원자격 유지.관리, 물품 또는 서비스 공급에 따른
                   금액 결제, 물품 또는 서비스의 공급.배송 등
                 </p>
-                <p>2. 개인정보의 처리 및 보유 기간</p>
+                <br/>
+                <p className="font-bold">2. 개인정보의 처리 및 보유 기간</p>
                 <p>
                   ① ‘미래민중’은 정보주체로부터 개인정보를 수집할 때 동의 받은
                   개인정보 보유․이용기간 또는 법령에 따른 개인정보 보유․이용기간
@@ -75,7 +76,8 @@ export default function PrivacyModal({ modalText, closeModal }) {
                   카카오채널을 통한 관리
                 </p>
                 <p>– 보유 기간 : 카카오채널 탈퇴 시, 즉시 삭제</p>
-                <p>
+                <br/>
+                <p className="font-bold">
                   3. 정보주체와 법정대리인의 권리·의무 및 그 행사방법 이용자는
                   개인정보주체로써 다음과 같은 권리를 행사할 수 있습니다.
                 </p>
@@ -83,11 +85,12 @@ export default function PrivacyModal({ modalText, closeModal }) {
                   ① 정보주체는 ‘미래민중’ 에 대해 언제든지 다음 각 호의 개인정보
                   보호 관련 권리를 행사할 수 있습니다.
                 </p>
-                <p>1. 개인정보 열람요구</p>
-                <p>2. 오류 등이 있을 경우 정정 요구</p>
-                <p>3. 삭제요구</p>
-                <p>4. 처리정지 요구</p>
-                <p>4. 처리하는 개인정보의 항목 작성</p>
+                <p>I.개인정보 열람요구</p>
+                <p>II. 오류 등이 있을 경우 정정 요구</p>
+                <p>III. 삭제요구</p>
+                <p>IV. 처리정지 요구</p>
+                <br/>
+                <p className="font-bold">4. 처리하는 개인정보의 항목 작성</p>
                 <p>① ‘미래민중’은 다음의 개인정보 항목을 처리하고 있습니다.</p>
                 <p>&lt;‘미래민중’에서 수집하는 개인정보 항목&gt;</p>
                 <p>
@@ -114,7 +117,8 @@ export default function PrivacyModal({ modalText, closeModal }) {
                   회원가입은 만14세 이상만 가능하도록 함으로써 아동의 개인정보를
                   수집하지 않습니다.
                 </p>
-                <p>5. 개인정보의 파기</p>
+                <br/>
+                <p className="font-bold">5. 개인정보의 파기</p>
                 <p>
                   ‘미래민중’은 원칙적으로 개인정보 처리목적이 달성된 경우에는
                   지체없이 해당 개인정보를 파기합니다. 파기의 절차, 기한 및
@@ -135,7 +139,8 @@ export default function PrivacyModal({ modalText, closeModal }) {
                   되었을 때에는 개인정보의 처리가 불필요한 것으로 인정되는
                   날로부터 5일 이내에 그 개인정보를 파기합니다.
                 </p>
-                <p>
+                <br/>
+                <p className="font-bold">
                   6. 개인정보 자동 수집 장치의 설치•운영 및 거부에 관한 사항
                 </p>
                 <p>
@@ -161,7 +166,8 @@ export default function PrivacyModal({ modalText, closeModal }) {
                   다. 쿠키 저장을 거부할 경우 맞춤형 서비스 이용에 어려움이
                   발생할 수 있습니다.
                 </p>
-                <p>7. 개인정보 보호책임자 작성</p>
+                <br/>
+                <p className="font-bold">7. 개인정보 보호책임자 작성</p>
                 <p>
                   ① ‘미래민중’은 개인정보 처리에 관한 업무를 총괄해서 책임지고,
                   개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을
@@ -185,13 +191,15 @@ export default function PrivacyModal({ modalText, closeModal }) {
                   ‘미래민중’은 정보주체의 문의에 대해 지체 없이 답변 및
                   처리해드릴 것입니다.
                 </p>
-                <p>8. 개인정보 처리방침 변경</p>
+                <br/>
+                <p className="font-bold">8. 개인정보 처리방침 변경</p>
                 <p>
                   ① 이 개인정보처리방침은 시행일로부터 적용되며, 법령 및 방침에
                   따른 변경내용의 추가, 삭제 및 정정이 있는 경우에는 변경사항의
                   시행 7일 전부터 공지사항을 통하여 고지할 것입니다.
                 </p>
-                <p>9. 개인정보의 안전성 확보 조치</p>
+                <br/>
+                <p className="font-bold">9. 개인정보의 안전성 확보 조치</p>
                 <p>
                   ‘미래민중’은 개인정보보호법 제29조에 따라 다음과 같이 안전성
                   확보에 필요한 기술적/관리적 및 물리적 조치를 하고 있습니다.
@@ -228,7 +236,8 @@ export default function PrivacyModal({ modalText, closeModal }) {
                   조치를 하고 있으며 침입차단시스템을 이용하여 외부로부터의 무단
                   접근을 통제하고 있습니다.
                 </p>
-                <p>10. 정보주체의 권익침해에 대한 구제방법</p>
+                <br/>
+                <p className="font-bold">10. 정보주체의 권익침해에 대한 구제방법</p>
                 <p>
                   아래의 기관은 미래민중과는 별개의 기관으로서, ‘미래민중’의
                   자체적인 개인정보 불만처리, 피해구제 결과에 만족하지

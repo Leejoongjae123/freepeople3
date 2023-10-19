@@ -140,7 +140,7 @@ export default function Statistics() {
                                         </td>
                                         <td className="w-1/4 px-5 py-5  bg-white border-b border-gray-200">
                                           <p className="text-cyan-600 font-bold  whitespace-no-wrap text-center ">
-                                          {elem.DATA_VALUE} <span className='text-gray-600 font-medium'>({elem.UNIT_NAME})</span>
+                                          {numberWithCommas(elem.DATA_VALUE)} <span className='text-gray-600 font-medium'>({elem.UNIT_NAME})</span>
                                           </p>
 
                                         </td>
@@ -187,4 +187,14 @@ export default function Statistics() {
         </div>
     
   )
+}
+
+function numberWithCommas(number) {
+  // 숫자를 문자열로 변환합니다.
+  let numberString = number?.toString();
+  
+  // 정규 표현식을 사용하여 천 단위 쉼표를 추가합니다.
+  numberString = numberString?.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  
+  return numberString;
 }
