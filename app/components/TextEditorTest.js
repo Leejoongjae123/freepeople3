@@ -24,10 +24,8 @@ export default function TextEditor({initialContent,inputContents,setInputContent
       <JoditEditor
         ref={editor}
         value={inputContents}
-        onBlur={(newContent) => {
-          setInputContents(newContent)
-        }
-      }
+        onChange={(newContent) => {}}
+        onBlur={ (newContent)=>{setInputContents(newContent)} }
       />
     <div>
     </div>
