@@ -204,7 +204,6 @@ export default function AddTopic() {
                 </div>
               </div>
             </div>
-
             <div className="border-b border-gray-900/10 pb-12">
               <div className="mt-10 space-y-10">
                 <fieldset>
