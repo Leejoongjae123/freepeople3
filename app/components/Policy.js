@@ -1,11 +1,12 @@
 "use client";
 import React from "react";
-import { FcDocument, FcDownload } from "react-icons/fc";
+import { FcDocument, FcDownload,FcNews } from "react-icons/fc";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Spinner from "./Spinner";
 import Link from "next/link";
 import "./test.css";
+
 
 export default function Policy() {
   const [kdipolicy, setKdipolicy] = useState([]);
@@ -85,7 +86,7 @@ export default function Policy() {
     
       <div className="mx-auto flex-col lg:mx-0">
         <div className="flex items-center">
-          <FcDocument size="40"></FcDocument>
+          <FcNews size="40"></FcNews>
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             정책/이슈
           </h2>

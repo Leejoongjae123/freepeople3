@@ -112,7 +112,7 @@ export default function SearchCard1() {
               <select
                 value={select1Value}
                 onChange={handleSelect1Change}
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
               >
                 <option value="">-- 선택 --</option>
                 <option value="제8회 전국동시지방선거">
@@ -132,7 +132,7 @@ export default function SearchCard1() {
                     <select
                       value={select2Value}
                       onChange={handleSelect2Change}
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                     >
                       <option value="">-- 선택 --</option>
                       <option value="국민의힘">국민의힘</option>
@@ -145,7 +145,7 @@ export default function SearchCard1() {
                     <select
                       value={select2Value}
                       onChange={handleSelect2Change}
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                     >
                       <option value="">-- 선택 --</option>
                       <option value="더불어민주당">더불어민주당</option>
@@ -159,7 +159,7 @@ export default function SearchCard1() {
                     <select
                       value={select2Value}
                       onChange={handleSelect2Change}
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                     >
                       <option value="">-- 선택 --</option>
                       <option value="더불어민주당">더불어민주당</option>
@@ -173,7 +173,7 @@ export default function SearchCard1() {
                     <select
                       value={select2Value}
                       onChange={handleSelect2Change}
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                     >
                       <option value="">-- 선택 --</option>
                       <option value="더불어민주당">더불어민주당</option>
@@ -187,7 +187,7 @@ export default function SearchCard1() {
                     <select
                       value={select2Value}
                       onChange={handleSelect2Change}
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                     >
                       <option value="">-- 선택 --</option>
                       <option value="더불어민주당">더불어민주당</option>
@@ -201,7 +201,7 @@ export default function SearchCard1() {
                     <select
                       value={select2Value}
                       onChange={handleSelect2Change}
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                     >
                       <option value="">-- 선택 --</option>
                       <option value="더불어민주당">더불어민주당</option>
