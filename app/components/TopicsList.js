@@ -90,6 +90,22 @@ export default function TopicsList() {
     // console.log("topic:",topic,'title:',title)
   };
 
+  const handleNextClick1 = () => {
+    const updatedList = noList.map((number) => number + 5);
+
+    setNoList(updatedList);
+    setNo(updatedList[0]);
+  };
+
+  const handlePreviousClick1 = () => {
+    const updatedList = noList.map((number) => number - 5);
+    if (no >= 6) {
+      setNoList(updatedList);
+      setNo(updatedList[4]);
+    } else {
+      // console.log("error");
+    }
+  };
 
   return (
     <>
