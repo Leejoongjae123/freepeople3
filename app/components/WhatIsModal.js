@@ -46,7 +46,7 @@ export default function PrivacyModal({ modalText, closeModal }) {
 
             <div className="flex-1 p-6 space-y-6 ">
               <div>
-                <p className="whitespace-pre-wrap text-base leading-relaxed text-black dark:text-gray-400">
+                <p className="whitespace-pre-wrap text-base leading-relaxed text-black ">
                   <span className="text-lg font-bold">
                     ■ 민중의 대한민국 정치 신뢰를 회복시킵니다.
                   </span>{" "}
