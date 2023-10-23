@@ -50,26 +50,45 @@ export default function EditTopic(props) {
       setContents(result);
     }
 
+    // try {
+    //   const response = await axios.post(
+    //     'https://mks5ux6whggik4anhr3c5ofdie0abvss.lambda-url.ap-northeast-2.on.aws/updateOnePosting',
+    //     // 'http://localhost:8000/updateOnePosting',
+    //     '',
+    //     {
+    //       params: {
+    //         'category': firstOne,
+    //         'id': secondOne,
+    //         'title': title,
+    //         'contents': contents,
+    //       },
+    //       headers: {
+    //         'accept': 'application/json',
+    //         'content-type': 'application/x-www-form-urlencoded'
+    //       }
+    //     }
+    //   );
+    //   // console.log("loading완료")
+    // } catch (error) {
+    //   console.error('Error fetching data:', error);
+    // }
+    let url='https://mks5ux6whggik4anhr3c5ofdie0abvss.lambda-url.ap-northeast-2.on.aws/updateOnePosting'
+    // let url='http://localhost:8000/updateOnePosting'
+    let postInfo=[{
+              'category': firstOne,
+              'id': secondOne,
+              'title': title,
+              'contents': contents,
+            }]
     try {
-      const response = await axios.post(
-        'https://mks5ux6whggik4anhr3c5ofdie0abvss.lambda-url.ap-northeast-2.on.aws/updateOnePosting',
-        '',
-        {
-          params: {
-            'category': firstOne,
-            'id': secondOne,
-            'title': title,
-            'contents': contents
-          },
-          headers: {
-            'accept': 'application/json',
-            'content-type': 'application/x-www-form-urlencoded'
-          }
-        }
-      );
-      // console.log("loading완료")
+      const response = await axios.post(url, postInfo, {
+        headers: {
+          accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      });
     } catch (error) {
-      console.error('Error fetching data:', error);
+      console.error("Error fetching data:", error);
     }
   };
 
