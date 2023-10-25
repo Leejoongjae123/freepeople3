@@ -252,7 +252,7 @@ export default function President() {
                     <p className={economyIndicators.exchangeupdown==="상승"?('text-center text-lg font-bold text-red-600'):('text-center text-lg font-bold text-blue-700')}>
                       {economyIndicators.exchangedev}
                     </p>
-                    {economyIndicators.exchangeupdwn === "상승" ? (
+                    {economyIndicators.exchangeupdown === "상승" ? (
                       <FaArrowUp className="text-red-600"></FaArrowUp>
                     ) : (
                       <FaArrowDown className="text-blue-600"></FaArrowDown>
