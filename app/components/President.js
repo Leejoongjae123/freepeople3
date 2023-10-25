@@ -240,7 +240,7 @@ export default function President() {
                 <FcCurrencyExchange size='40'></FcCurrencyExchange>
               </div> */}
 
-                <div className="ml-4">
+                <div className="text-center">
                   <h2 className="text-center font-semibold">환율(USD)</h2>
                   <div className={economyIndicators.exchangeupdown==="상승"?('text-center text-lg font-bold text-red-600'):('text-center text-lg font-bold text-blue-700')}>
                     <p>{economyIndicators.exchange}</p>
@@ -267,7 +267,7 @@ export default function President() {
                 <FcBullish size='40'></FcBullish>
               </div> */}
 
-                <div className="ml-4">
+                <div className="text-center">
                   <h2 className="font-semibold">코스피</h2>
                   <p className={economyIndicators.kospiupdown==="상승"?('text-center text-lg font-bold text-red-600'):('text-center text-lg font-bold text-blue-700')}>
                     {economyIndicators.kospi}
@@ -288,7 +288,7 @@ export default function President() {
                 {/* <div className="flex h-12 w-12 items-center justify-center rounded-full border border-blue-100 bg-blue-50">
                 <FcAreaChart size='40'></FcAreaChart>
               </div> */}
-                <div className="ml-4">
+                <div className="text-center">
                   <h2 className="font-semibold">코스닥</h2>
                   <p className={economyIndicators.kosdaqupdown==="상승"?('text-center text-lg font-bold text-red-600'):('text-center text-lg font-bold text-blue-700')}>
                     {economyIndicators.kosdaq}
@@ -310,7 +310,7 @@ export default function President() {
                 {/* <div className="flex h-12 w-12 items-center justify-center rounded-full border border-indigo-100 bg-indigo-50">
                 <FcMoneyTransfer  size='40'></FcMoneyTransfer>
               </div> */}
-                <div className="ml-4">
+                <div className="text-center">
                   <h2 className="font-semibold">CD금리(91일)</h2>
                   <div className={economyIndicators.cdinterestupdown==="상승"?('text-center text-lg font-bold text-red-600'):('text-center text-lg font-bold text-blue-700')}>
                     <p>{economyIndicators.cdinterest}{" "}</p>
@@ -343,7 +343,7 @@ export default function President() {
                 {/* <div className="flex h-12 w-12 items-center justify-center rounded-full border border-orange-100 bg-orange-50">
                 <GiBarrel size='40'></GiBarrel>
               </div> */}
-                <div className="ml-4">
+                <div className="text-center">
                   <h2 className="font-semibold">유가(두바이)</h2>
                   <p className={economyIndicators.oilupdown==="상승"?('text-center text-lg font-bold text-red-600'):('text-center text-lg font-bold text-blue-700')}>
                     {economyIndicators.oil}{" "}
@@ -368,7 +368,7 @@ export default function President() {
                 {/* <div className="flex h-12 w-12 items-center justify-center rounded-full border border-red-100 bg-red-50">
                 <AiFillGolden color='#FFd700' size='40'></AiFillGolden>
               </div> */}
-                <div className="ml-4">
+                <div className="text-center">
                   <h2 className="font-semibold">금 시세</h2>
                   <p className={economyIndicators.goldupdown==="상승"?('text-center text-lg font-bold text-red-600'):('text-center text-lg font-bold text-blue-700')}>
                     {economyIndicators.gold}{" "}
