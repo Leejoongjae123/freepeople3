@@ -19,6 +19,7 @@ import Spinner from "./Spinner";
 import Link from "next/link";
 import PresidentSlider from "./PresidentSlider";
 import axios from "axios";
+import { BiSolidUpArrow,BiSolidDownArrow } from "react-icons/bi";
 
 export default function President() {
   const [presidentRealmeter, setPresidentRealmeter] = useState([]);
@@ -253,9 +254,9 @@ export default function President() {
                       {economyIndicators.exchangedev}
                     </p>
                     {economyIndicators.exchangeupdown === "상승" ? (
-                      <FaArrowUp className="text-red-600"></FaArrowUp>
+                      <BiSolidUpArrow className="text-red-600"></BiSolidUpArrow>
                     ) : (
-                      <FaArrowDown className="text-blue-600"></FaArrowDown>
+                      <BiSolidDownArrow className="text-blue-600"></BiSolidDownArrow>
                     )}
                   </div>
                 </div>
@@ -276,9 +277,9 @@ export default function President() {
                       {economyIndicators.kospidev}
                     </p>
                     {economyIndicators.kospiupdown === "상승" ? (
-                      <FaArrowUp className="text-red-600"></FaArrowUp>
+                      <BiSolidUpArrow className="text-red-600"></BiSolidUpArrow>
                     ) : (
-                      <FaArrowDown className="text-blue-600"></FaArrowDown>
+                      <BiSolidDownArrow className="text-blue-600"></BiSolidDownArrow>
                     )}
                   </div>
                 </div>
@@ -297,9 +298,9 @@ export default function President() {
                       {economyIndicators.kosdaqdev}
                     </p>
                     {economyIndicators.kosdaqupdown === "상승" ? (
-                      <FaArrowUp className="text-red-600"></FaArrowUp>
+                      <BiSolidUpArrow className="text-red-600"></BiSolidUpArrow>
                     ) : (
-                      <FaArrowDown className="text-blue-600"></FaArrowDown>
+                      <BiSolidDownArrow className="text-blue-600"></BiSolidDownArrow>
                     )}
                   </div>
                 </div>
@@ -323,13 +324,13 @@ export default function President() {
                       {economyIndicators.cdinterestdev}
                     </p>
                     {economyIndicators.cdinterestupdown === "상승" ? (
-                      <FaArrowUp className="text-red-600"></FaArrowUp>
+                      <BiSolidUpArrow className="text-red-600"></BiSolidUpArrow>
                     ) : (
                       <></>
                     )}
                     {
                       economyIndicators.cdinterestupdown==="하락"?(
-                        <FaArrowDown className="text-blue-700"></FaArrowDown>
+                        <BiSolidDownArrow className="text-blue-700"></BiSolidDownArrow>
                       ):(
                         <></>
                       )
@@ -355,9 +356,9 @@ export default function President() {
                       {economyIndicators.oildev}
                     </p>
                     {economyIndicators.oilupdown === "상승" ? (
-                      <FaArrowUp className="text-red-600"></FaArrowUp>
+                      <BiSolidUpArrow className="text-red-600"></BiSolidUpArrow>
                     ) : (
-                      <FaArrowDown className="text-blue-600"></FaArrowDown>
+                      <BiSolidDownArrow className="text-blue-600"></BiSolidDownArrow>
                     )}
                   </div>
                 </div>
@@ -380,9 +381,9 @@ export default function President() {
                       {economyIndicators.golddev}
                     </p>
                     {economyIndicators.goldupdown === "상승" ? (
-                      <FaArrowUp className="text-red-600"></FaArrowUp>
+                      <BiSolidUpArrow className="text-red-600"></BiSolidUpArrow>
                     ) : (
-                      <FaArrowDown className="text-blue-600"></FaArrowDown>
+                      <BiSolidDownArrow className="text-blue-600"></BiSolidDownArrow>
                     )}
                   </div>
                 </div>
