@@ -69,7 +69,7 @@ export default function Footer() {
                   </h2>
                   <ul className="text-gray-500 dark:text-gray-400 font-medium">
                     <li className="h-10">
-                    <button onClick={toggleModal1}>미래 민중은</button>
+                    <button onClick={toggleModal1}>미래민중은</button>
                       {/* <FooterModal></FooterModal> */}
                     </li>
                     <li className="h-10">
