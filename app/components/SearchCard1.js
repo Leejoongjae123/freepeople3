@@ -94,25 +94,13 @@ export default function SearchCard1() {
     <div className="h-full">
       <div className="w-full mx-auto">
         <div className="py-8">
-          <div className="flex items-center justify-between flex-row w-full mb-1 sm:mb-0">
-            <h2 className="flex-1 text-base lg:text-lg leading-tight font-bold">정당정책</h2>
-            <div className="flex gap-x-2 text-end">
-              {/* <select defaultValue="BIG" id="countries" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                    <option >선거종류</option>
-                    <option value="BIG">대선</option>
-                    <option value="ALL">총선</option>
-                    <option value="REST">지선</option>
-                  </select>
-                  <select defaultValue="BIG" id="countries" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                    <option >지역구1</option>
-                    <option value="BIG">대선</option>
-                    <option value="ALL">총선</option>
-                    <option value="REST">지선</option>
-                  </select> */}
+          <div className="flex flex-col lg:flex-row items-center justify-between w-full mb-1 sm:mb-0">
+            <h2 className="text-center md:text-left flex-1 text-base lg:text-lg leading-tight font-bold">정당정책</h2>
+            <div className="flex flex-col md:flex-row gap-x-2 text-end my-3 ">
               <select
                 value={select1Value}
                 onChange={handleSelect1Change}
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 my-3 md:my-0"
               >
                 <option value="">-- 선택 --</option>
                 <option value="제8회 전국동시지방선거">

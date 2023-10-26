@@ -722,14 +722,13 @@ export default function SearchCard1() {
     <div className="h-full">
       <div className="container h-full w-full mx-auto">
         <div className="py-8">
-          <div className="flex flex-row items-center justify-between w-full mb-1 sm:mb-0">
-            <div className="flex-grow"><h2 className="flex-1 text-base lg:text-lg leading-tight font-bold">개표결과</h2></div>
-            
-            <div className="flex gap-x-2 text-end">
+          <div className="flex flex-col md:flex-row items-center justify-between w-full mb-1 sm:mb-0">
+            <div className="flex-grow"><h2 className="flex-1 text-base lg:text-lg leading-tight font-bold text-center my-3 md:my-0 md:text-left">개표결과</h2></div>
+            <div className="flex flex-col md:flex-row gap-x-2 text-end">
               <select
                 value={select1Value}
                 onChange={handleSelect1Change}
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 my-1 md:my-0"
               >
                 <option value="">-- 선택 --</option>
                 <option value="대선">대선</option>
@@ -742,7 +741,7 @@ export default function SearchCard1() {
                     <select
                       value={select2Value}
                       onChange={handleSelect2Change}
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 my-1 md:my-0"
                     >
                       <option value="">-- 선택 --</option>
                       <option value="제20대 대통령선거">
@@ -760,7 +759,7 @@ export default function SearchCard1() {
                     <select
                       value={select2Value}
                       onChange={handleSelect2Change}
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 my-1 md:my-0"
                     >
                       <option value="">-- 선택 --</option>
                       <option value="제21대 국회의원선거">
@@ -778,7 +777,7 @@ export default function SearchCard1() {
                     <select
                       value={select2Value}
                       onChange={handleSelect2Change}
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 my-1 md:my-0"
                     >
                       <option value="">-- 선택 --</option>
                       <option value="제8회 전국동시지방선거">
@@ -799,7 +798,7 @@ export default function SearchCard1() {
                 <select
                   value={select3Value}
                   onChange={handleSelect3Change}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 my-1 md:my-0"
                 >
                   <option value="">-- 선택 --</option>
                   {region1.map((elem, index) => {
@@ -816,7 +815,7 @@ export default function SearchCard1() {
                   <select
                     value={select3Value}
                     onChange={handleSelect3Change}
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 my-1 md:my-0"
                   >
                     <option value="">-- 선택 --</option>
                     {region1_1.map((elem, index) => {
@@ -836,7 +835,7 @@ export default function SearchCard1() {
                   <select
                     value={select4Value}
                     onChange={handleSelect4Change}
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 my-1 md:my-0"
                   >
                     <option value="">-- 선택 --</option>
                     {
