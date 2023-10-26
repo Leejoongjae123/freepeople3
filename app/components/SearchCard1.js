@@ -104,6 +104,7 @@ export default function SearchCard1() {
               >
                 <option value="">-- 선택 --</option>
                 <option value="제8회 전국동시지방선거">
+
                   제8회 전국동시지방선거
                 </option>
                 <option value="제20대 대통령선거">제20대 대통령선거</option>
