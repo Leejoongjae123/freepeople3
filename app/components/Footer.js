@@ -57,17 +57,17 @@ export default function Footer() {
             <div className="md:flex md:justify-between">
               <div className="mb-6 md:mb-0">
                 <a href="https://flowbite.com/" className="flex items-center">
-                  <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+                  <span className="self-center text-2xl font-semibold whitespace-nowrap ">
                     미래민중
                   </span>
                 </a>
               </div>
               <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                 <div>
-                  <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                  <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase ">
                     INTRODUCTION
                   </h2>
-                  <ul className="text-gray-500 dark:text-gray-400 font-medium text-xs">
+                  <ul className="text-gray-500  font-medium text-xs">
                     <li className="h-10">
                     <button onClick={toggleModal1}>미래민중은</button>
                       {/* <FooterModal></FooterModal> */}
@@ -81,20 +81,20 @@ export default function Footer() {
                   </ul>
                 </div>
                 <div>
-                  <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                  <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase ">
                     CONTACT US
                   </h2>
-                  <ul className="flex flex-col text-gray-500 dark:text-gray-400 font-medium text-xs">
+                  <ul className="flex flex-col text-gray-500 font-medium text-xs">
                     <li className="h-10">jeongfran@gmail.com</li>
 
                     <li className="h-10">wsfran@naver.com</li>
                   </ul>
                 </div>
                 <div>
-                  <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                  <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase ">
                     INFO
                   </h2>
-                  <ul className="flex flex-col text-gray-500 dark:text-gray-400 font-medium text-xs">
+                  <ul className="flex flex-col text-gray-500 font-medium text-xs">
                     <li className="h-10">등록번호 : 서울 아55154</li>
                     <li className="h-10">등록일 : 2023년 11월 3일</li>
                     <li className="h-10">발행인 : 정우식</li>
