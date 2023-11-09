@@ -62,12 +62,12 @@ export default function Footer() {
                   </span>
                 </a>
               </div>
-              <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-2">
+              <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                 <div>
                   <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                     INTRODUCTION
                   </h2>
-                  <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                  <ul className="text-gray-500 dark:text-gray-400 font-medium text-xs">
                     <li className="h-10">
                     <button onClick={toggleModal1}>미래민중은</button>
                       {/* <FooterModal></FooterModal> */}
@@ -84,10 +84,21 @@ export default function Footer() {
                   <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                     CONTACT US
                   </h2>
-                  <ul className="flex flex-col text-gray-500 dark:text-gray-400 font-medium">
+                  <ul className="flex flex-col text-gray-500 dark:text-gray-400 font-medium text-xs">
                     <li className="h-10">jeongfran@gmail.com</li>
 
                     <li className="h-10">wsfran@naver.com</li>
+                  </ul>
+                </div>
+                <div>
+                  <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                    INFO
+                  </h2>
+                  <ul className="flex flex-col text-gray-500 dark:text-gray-400 font-medium text-xs">
+                    <li className="h-10">등록번호 : 서울 아55154</li>
+                    <li className="h-10">등록일 : 2023년 11월 3일</li>
+                    <li className="h-10">발행인 : 정우식</li>
+                    <li className="h-10">편집인 : 정우식</li>
                   </ul>
                 </div>
               </div>

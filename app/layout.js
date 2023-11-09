@@ -8,11 +8,18 @@ import Provider from './components/Provider'
 export const metadata={
   title:'미래민중:재인융합경제연구소',
   description:"오직 민중을 위한",
-  verification: {
-    naver: "a2f5d1eae14ceaedf66e33f9430d3de06f4cb1e8",
+  icons: {
+    icon: '',
   },
-
 }
+// }
+// export const metadata = {
+//   title: 'HotForum : 당신의 이야기를 실현시키는 곳',
+//   description: '당신의 이야기를 적어주세요',
+//   icons: {
+//     icon: [],
+//   },
+// };
 
 export default function RootLayout({ children}) { 
   
