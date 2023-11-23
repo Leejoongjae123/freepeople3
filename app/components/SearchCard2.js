@@ -720,11 +720,11 @@ export default function SearchCard1() {
 
   return (
     <div className="h-full">
-      <div className="container h-full w-full mx-auto">
+      <div className="h-full w-full mx-auto">
         <div className="py-8">
           <div className="flex flex-col md:flex-row items-center justify-between w-full mb-1 sm:mb-0">
             <div className="flex-grow"><h2 className="flex-1 text-base lg:text-lg leading-tight font-bold text-center my-3 md:my-0 md:text-left">개표결과</h2></div>
-            <div className="flex flex-col md:flex-row gap-x-2 text-end">
+            <div className="flex flex-col md:flex-row gap-x-2 text-end my-3">
               <select
                 value={select1Value}
                 onChange={handleSelect1Change}
