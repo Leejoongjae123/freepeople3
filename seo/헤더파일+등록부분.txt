@@ -1,0 +1,14 @@
+<meta name="google-site-verification" content="ENm8OGAtRozrrLPqjRK3Mp-V7U1lURd63sWwt8oKDCw" />
+<meta name="naver-site-verification" content="676920be85c0db8a19670002a658d5a5244dd72b" />
+
+
+<title>미래민중 | 재인융합경제연구소</title>
+<meta name="description" content="정치경제 정보제공 서비스. 정치경제 논평, 지지도 분석, 정치경제 연구, 선거 및 통계, 주요 정당 브리핑, 대통령실 브리핑, 정책 동향">
+<meta property="og:type" content="website"> 
+<meta property="og:title" content="미래민중 | 재인융합경제연구소">
+<meta property="og:description" content="정치경제 정보제공 서비스. 정치경제 논평, 지지도 분석, 정치경제 연구, 선거 및 통계, 주요 정당 브리핑, 대통령실 브리핑, 정책 동향">	
+<meta name="keywords" content="국민정치경제,대한민국, 국내정치, 경제현안관련논평, 대통령지지도분석, 정치경제, 관련정책연구기사, 선거, 주요정당브리핑, 대통령실브리핑, 정부동향,국회정책동향" />
+<meta property="og:url" content="https://www.peoplehub.co.kr/">
+<link rel="canonical" href="https://www.peoplehub.co.kr/">
+<meta name="robots" content="index,follow">
+<meta name="viewport" content="width=device-width">

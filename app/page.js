@@ -19,6 +19,7 @@ import Election from "./components/Election";
 import { Song_Myung } from "next/font/google";
 import { East_Sea_Dokdo } from "next/font/google";
 import Head from "next/head";
+
 const SongMyung = Song_Myung({ subsets: ["latin"], weight: ["400"] });
 const EastSeaDokdo = East_Sea_Dokdo({ subsets: ["latin"], weight: ["400"] });
 
@@ -29,10 +30,9 @@ function classNames(...classNamees) {
 export default function Home() {
   return (
     <div>
-      <Head>
-        <title>미래민중</title>
-        <meta name="description" content="자유민중" />
-      </Head>
+
+
+
 
       <Element name="0"></Element>
       <div className="relative py-1 lg:py-6">
