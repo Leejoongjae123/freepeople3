@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import SignOutButton from "./SignOutButton";
 
 export default function Sidebar() {
   return (
@@ -33,6 +34,8 @@ export default function Sidebar() {
                 <span className="mx-2 text-sm font-medium">AddItem</span>
               </Link>
             </div>
+            <SignOutButton></SignOutButton>
+            
           </div>
         </nav>
       </div>
