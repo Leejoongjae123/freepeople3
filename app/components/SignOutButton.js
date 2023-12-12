@@ -14,7 +14,7 @@ export default function SignOutButton() {
     href="#"
   >
     <button onClick={()=>{handleClick()}} href="/">
-      <span className="mx-2 text-sm font-medium">SignOut</span>
+      <span className="mx-2 text-sm font-medium">Logout</span>
     </button>
   </div>
   )
