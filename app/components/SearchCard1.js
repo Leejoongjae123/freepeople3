@@ -104,7 +104,6 @@ export default function SearchCard1() {
               >
                 <option value="">-- 선택 --</option>
                 <option value="제8회 전국동시지방선거">
-
                   제8회 전국동시지방선거
                 </option>
                 <option value="제20대 대통령선거">제20대 대통령선거</option>
@@ -140,8 +139,8 @@ export default function SearchCard1() {
                       <option value="더불어민주당">더불어민주당</option>
                       <option value="국민의힘">국민의힘</option>
                       <option value="정의당">정의당</option>
-                      <option value="정의당">국민의당</option>
-                      <option value="정의당">기본소득당</option>
+                      <option value="국민의당">국민의당</option>
+                      <option value="기본소득당">기본소득당</option>
                     </select>
                   )}
                   {select1Value === "제21대 국회의원선거" && (
