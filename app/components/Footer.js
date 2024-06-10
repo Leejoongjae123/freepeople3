@@ -99,6 +99,9 @@ export default function Footer() {
                     <li className="h-10">등록일 : 2023년 11월 3일</li>
                     <li className="h-10">발행인 : 정우식</li>
                     <li className="h-10">편집인 : 정우식</li>
+                    <li className="h-10">주소 : 서울시 서초구 서초중앙로 24길 43 102동 1804호</li>
+                    <li className="h-10">전화 : 02-593-6154</li>
+                    <li className="h-10">청소년보호책임자 : 정우식</li>
                   </ul>
                 </div>
               </div>
