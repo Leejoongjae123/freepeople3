@@ -94,7 +94,7 @@ export default function Footer() {
                   <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase ">
                     INFO
                   </h2>
-                  <ul className="flex flex-col text-gray-500 font-medium text-xs">
+                  <ul className="flex flex-col gap-2 text-gray-500 font-medium text-xs">
                     <li className="h-10">등록번호 : 서울 아55154</li>
                     <li className="h-10">등록일 : 2023년 11월 3일</li>
                     <li className="h-10">발행인 : 정우식</li>
